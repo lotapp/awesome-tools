@@ -1,11 +1,11 @@
-# 逆天开发辅助工具
+# 逆天开发库
 
 **防止失效，我都Fork一份到自己的github中，并完善了部分文档**（过时请Issue下）
 > `看文档`：我的Github；`看源码`：原地址
 
 PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项目~~~阿里，百度，腾讯，360，新浪，网易，小米等](https://www.cnblogs.com/dunitian/p/5581520.html)**
 
-- [逆天开发辅助工具](#%E9%80%86%E5%A4%A9%E5%BC%80%E5%8F%91%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7)
+- [逆天开发库](#%E9%80%86%E5%A4%A9%E5%BC%80%E5%8F%91%E5%BA%93)
     - [IDE](#ide)
         - [1.VSCode推荐插件](#1vscode%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6)
             - [1.1.Public](#11public)
@@ -26,6 +26,8 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
         - [2.1.调试](#21%E8%B0%83%E8%AF%95)
         - [2.2.Asyncio](#22asyncio)
         - [2.3.优化](#23%E4%BC%98%E5%8C%96)
+            - [2.3.1.Numpy](#231numpy)
+            - [2.3.2.Numba](#232numba)
         - [2.3.todo](#23todo)
     - [3.DataBase](#3database)
         - [3.1.SQL](#31sql)
@@ -251,7 +253,29 @@ PS：想要不高亮显示就/xxx查找一个不存在的即可
 
 ### 2.3.优化
 
+#### 2.3.1.Numpy
 
+#### 2.3.2.Numba
+
+**Anaconda开源的即时编译器**：
+> <https://github.com/lotapp/numba>
+
+添加一个装饰器就可以了（Numba 使用 LLVM 编译器基础结构 将原生 python 代码转换成优化的机器码）
+
+```py
+from numba import jit
+
+# 当使用 @jit 时，请确保您的代码有 numba 可以编译的内容，比如包含库（numpy）和它支持函数的计算密集型循环。否则它将不会编译任何东西，并且您的代码将比没有使用 numba 时更慢，因为存在 numba 内部代码检查的额外开销
+@jit
+def function(x):
+    # 循环或数据密集型计算或
+    return x
+```
+
+![架构](https://camo.githubusercontent.com/d632db38d871baaca8afe8eccc01dcb211a4a037/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3838302f312a396e36577045586a7544326c42536c58325f705530672e706e67)
+
+PS：案例：<https://github.com/numba/numba-examples>
+> <https://github.com/lotapp/gtc2019-numba>
 
 ### 2.3.todo
 
