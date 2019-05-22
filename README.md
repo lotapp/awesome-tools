@@ -4,6 +4,7 @@
 > `看文档`：我的Github；`看源码`：原地址
 
 PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项目~~~阿里，百度，腾讯，360，新浪，网易，小米等](https://www.cnblogs.com/dunitian/p/5581520.html)**
+> **常用解决方案**：<https://github.com/LessChina>
 
 - [逆天开发库](#%E9%80%86%E5%A4%A9%E5%BC%80%E5%8F%91%E5%BA%93)
     - [IDE](#ide)
