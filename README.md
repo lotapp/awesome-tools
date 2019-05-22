@@ -34,9 +34,18 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
             - [2.抓包](#2%E6%8A%93%E5%8C%85)
                 - [2.1.go-sniffer](#21go-sniffer)
             - [3.代理](#3%E4%BB%A3%E7%90%86)
+                - [3.1.MyCat](#31mycat)
+                - [3.2.DBProxy](#32dbproxy)
+                - [3.3.Atlas](#33atlas)
             - [测试](#%E6%B5%8B%E8%AF%95)
                 - [SQLer](#sqler)
         - [3.2.NoSQL](#32nosql)
+            - [3.2.1.集群系](#321%E9%9B%86%E7%BE%A4%E7%B3%BB)
+                - [1.Codis](#1codis)
+                - [2.TwemProxy](#2twemproxy)
+                - [3.overlord](#3overlord)
+                - [扩展](#%E6%89%A9%E5%B1%95)
+            - [3.2.2.私有云](#322%E7%A7%81%E6%9C%89%E4%BA%91)
         - [3.3.多功能工具](#33%E5%A4%9A%E5%8A%9F%E8%83%BD%E5%B7%A5%E5%85%B7)
     - [4.Spark](#4spark)
     - [5.Architecuture](#5architecuture)
@@ -377,7 +386,27 @@ SQL中的子查询、or条件、使用函数的条件 会忽略不处理
 
 #### 3.代理
 
+##### 3.1.MyCat
 
+**【推荐】常用中间件：`Mycat`**（性能一直是个问题）
+> <https://github.com/lotapp/Mycat-Server>
+
+PS：MyCat性能提升版
+> <https://github.com/lotapp/Mycat2>
+
+##### 3.2.DBProxy
+
+**【推荐】美团开源数据库代理**：
+> <https://github.com/lotapp/DBProxy>
+
+[点我看手册:](https://github.com/lotapp/DBProxy/blob/master/doc/USER_GUIDE.md)
+
+![管理](https://raw.githubusercontent.com/lotapp/DBProxy/master/doc/img/dbproxy-function.jpg)
+
+##### 3.3.Atlas
+
+PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是基于它的拓展
+> <https://github.com/lotapp/Atlas>
 
 #### 测试
 
@@ -434,9 +463,55 @@ adduser {
 
 ### 3.2.NoSQL
 
+#### 3.2.1.集群系
+
+##### 1.Codis
+
+**【推荐】基于代理的Redis集群解决方案，支持管道和动态扩展**：
+> <https://github.com/LessChina/codis>
+
+架构图：
+
+![架构](https://raw.githubusercontent.com/LessChina/codis/release3.2/doc/pictures/architecture.png)
+
+##### 2.TwemProxy
+
+**memcached和redis的轻量级代理`TwemProxy`**：
+> <https://github.com/lotapp/twemproxy>
+
+##### 3.overlord
+
+**【推荐】bilibili开源的memcached和redis的集群解决方案**：
+> <https://github.com/lotapp/overlord>
+
+PS：基于mesos和etcd提供的自动化缓存节点管理平台
+
+架构图：
+
+![架构](https://raw.githubusercontent.com/lotapp/overlord/master/doc/images/cache-platform-arch.png)
+
+##### 扩展
+
+**如果不想要集群，只是扩充单机能力，那么就可以考虑`Pika`**
+> PS：最好只当一个过渡使用，根据经验：**360的开源维护一般都不超过2年**
+
+**Pika是与redis兼容的nosql**（主要解决redis由于存储数据量巨大而导致内存不够用的容量瓶颈）
+> <https://github.com/lotapp/pika>
+
+PS：可以用在twemproxy或者codis中来实现静态数据分片
+
+#### 3.2.2.私有云
+
+**搜狐开源的Redis私有云平台**：
+> <https://github.com/lotapp/cachecloud>
+
+![架构](https://camo.githubusercontent.com/debf929f0dcbc94fdb20258754f417322ccbc8b4/687474703a2f2f69302e6974632e636e2f32303137303632342f333038345f37353366613731315f346431645f376635315f373430355f3037373233633165343366365f312e706e67)
+
+官方很细心提供了入门视频：<http://pan.baidu.com/s/1c2mET5e>
+
 ### 3.3.多功能工具
 
-**360开源一款多数据源SQL分析引擎:`Quicksql`**
+**360开源一款多数据源SQL分析引擎:`QuickSQL`**
 > <https://github.com/lotapp/Quicksql>
 
 ![架构图](https://github.com/lotapp/Quicksql/raw/master/doc/picture/p1.png)
@@ -495,6 +570,8 @@ PS：搭建在线IDE的时候可以使用
 2. [Leaf：美团分布式ID生成服务开源](https://tech.meituan.com/2019/03/07/open-source-project-leaf.html)
 
 PS：扩展 ~ `Snowflake算法`
+
+![核心](https://awps-assets.meituan.net/mit-x/blog-images-bundle-2017/eee18df9.png)
 
 #### 5.1.2.布隆过滤
 
