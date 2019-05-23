@@ -510,7 +510,36 @@ PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是�
 
 #### 4.运维
 
-**MySQL常用工具包**：[percona-toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html) | [离线包](https://www.percona.com/downloads/percona-toolkit/LATEST/)
+**MySQL常用工具包**：[percona-toolkit](https://www.percona.com/downloads/percona-toolkit/LATEST/)
+> 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/index.html>
+
+列几个常用的：
+
+1. `pt-summary`：查看`服务器信息`
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-summary.html>
+2. `pt-diskstats`：查看`磁盘开销`使用信息
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-diskstats.html>
+3. `pt-mysql-summary --user=用户名 --password=密码`：查看`mysql`的`信息`
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-mysql-summary.html>
+4. `pt-ioprofile`：查看mysql表和文件的`IO开销`
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-ioprofile.html>
+5. `pt-show-grants --user=root --password=密码`：**查看mysql`授权`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-show-grants.html>
+    - PS：通过`--revoke`、`-separate`等,可以撤消用户的特定权限
+6. `pt-duplicate-key-checker --host=localhost --user=root --password=密码`：**`查找`数据库表中`重复的索引`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-duplicate-key-checker.html>
+7. `pt-deadlock-logger --user=root --password=密码 --host=localhost`：**查看mysql`死锁信息`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-deadlock-logger.html>
+8. `pt-query-digest /var/lib/mysql/localhost-slow.log`：**分析`慢查询日志`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-query-digest.html>
+9. `pt-index-usage /var/lib/mysql/localhost-slow.log`：**从`慢查询`日志中分析`索引使用情况`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-index-usage.html>
+10. `pt-config-diff /etc/my.cnf /etc/my_master.cnf`：**`查看`不同mysql`配置文件的差异`**
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-config-diff.html>
+11. `pt-slave-find --host=localhost --user=root --password=密码`：查找mysql的`从库和同步状态`
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-slave-find.html>
+12. `pt-table-checksum --user=root --password=密码`：`验证`数据库`复制的完整性`
+    - 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/pt-table-checksum.html>
 
 安装附录：
 
@@ -555,8 +584,8 @@ Running transaction check
 Running transaction test
 Transaction test succeeded
 Running transaction
-  正在安装    : percona-toolkit-2.2.20-1.noarch                                                                                     1/1 
-  验证中      : percona-toolkit-2.2.20-1.noarch                                                                                     1/1 
+  正在安装    : percona-toolkit-2.2.20-1.noarch                                                                                     1/1
+  验证中      : percona-toolkit-2.2.20-1.noarch                                                                                     1/1
 
 已安装:
   percona-toolkit.noarch 0:2.2.20-1
@@ -566,7 +595,25 @@ Running transaction
 
 ##### 4.1.慢查询工具
 
-推荐两款：
+先简单分析下慢查询日志：
+
+```shell
+# Time: 2019-05-22T21:16:28.759491+08:00
+# User@Host: root[root] @ localhost []  Id:    11
+# Query_time: 0.000818  Lock_time: 0.000449 Rows_sent: 5  Rows_examined: 5
+SET timestamp=1558530988;
+select * from mysql.user order by host; # SQL语句
+```
+
+1. `Time`：查询的**执行时间**（`start_time`）
+2. `User@Host: root[root] @ localhost []  Id:11`：执行 sql 的**主机信息**
+3. `Query_time`：SQL**`查询`**所**耗**的**时**间
+4. `Lock_time`：**锁定时间**
+5. `Rows_sent`：所**发送的行数**
+6. `Rows_examined`：**锁扫描的行数**
+7. `SET timestamp=1558530988;`：SQL**执行时间**
+
+现在可以说说工具了，推荐两款：
 
 1.自带的慢日志分析工具：**mysqldumpslow**：
 > **查询最慢的10条SQL：`mysqldumpslow -s t -t 10 /var/lib/mysql/localhost-slow.log`**
