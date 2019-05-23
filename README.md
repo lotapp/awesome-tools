@@ -67,6 +67,8 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
 
 ## IDE
 
+**常用谷歌浏览器插件**：<https://www.cnblogs.com/dunitian/p/5848931.html>
+
 ### 1.VSCode推荐插件
 
 #### 1.1.Public
@@ -510,6 +512,58 @@ PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是�
 
 **MySQL常用工具包**：[percona-toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html) | [离线包](https://www.percona.com/downloads/percona-toolkit/LATEST/)
 
+安装附录：
+
+```shell
+# Ubuntu：# curl https://www.percona.com/downloads/percona-toolkit/2.2.20/deb/percona-toolkit_2.2.20-1_all.deb > percona-toolkit-2.2.20.deb
+# CentOS：# curl https://www.percona.com/downloads/percona-toolkit/2.2.20/RPM/percona-toolkit-2.2.20-1.noarch.rpm > percona-toolkit-2.2.20.noarch.rpm
+[dnt@localhost ~]$ curl https://www.percona.com/downloads/percona-toolkit/2.2.20/RPM/percona-toolkit-2.2.20-1.noarch.rpm > percona-toolkit-2.2.20.noarch.rpm
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1700k  100 1700k    0     0   309k      0  0:00:05  0:00:05 --:--:--  426k
+
+[root@localhost dnt] ls
+percona-toolkit-2.2.20.noarch.rpm
+
+# Ubuntu：# sudo apt install ./percona-toolkit-2.2.20.deb -y
+# CentOS：# yum install percona-toolkit-2.2.20.noarch.rpm -y
+[root@localhost dnt] yum install percona-toolkit-2.2.20.noarch.rpm -y
+已加载插件：fastestmirror
+正在检查 percona-toolkit-2.2.20.noarch.rpm: percona-toolkit-2.2.20-1.noarch
+percona-toolkit-2.2.20.noarch.rpm 将被安装
+正在解决依赖关系
+--> 正在检查事务
+---> 软件包 percona-toolkit.noarch.0.2.2.20-1 将被 安装
+--> 解决依赖关系完成
+
+依赖关系解决
+
+========================================================================================================================================
+ Package                         架构                   版本                       源                                              大小
+========================================================================================================================================
+正在安装:
+ percona-toolkit                 noarch                 2.2.20-1                   /percona-toolkit-2.2.20.noarch                 5.7 M
+
+事务概要
+========================================================================================================================================
+安装  1 软件包
+
+总计：5.7 M
+安装大小：5.7 M
+Downloading packages:
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  正在安装    : percona-toolkit-2.2.20-1.noarch                                                                                     1/1 
+  验证中      : percona-toolkit-2.2.20-1.noarch                                                                                     1/1 
+
+已安装:
+  percona-toolkit.noarch 0:2.2.20-1
+
+完毕！
+```
+
 ##### 4.1.慢查询工具
 
 推荐两款：
@@ -532,8 +586,8 @@ PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是�
 
 PS：使用mysqldumpslow的分析结果不会显示具体完整的sql语句：
 
-- **翻页sql不一样，也性能也是不一样，越往后的页数越看你参数慢查询，而mysqldumpslow把所有翻页sql当成一个sql了**
-- eg：`select * from tb_table where uid=20 group by createtime limit 10000, 1000;` ==> `select * from tb_table where uid=N group by createtime limit N, N;`
+1. **翻页sql不一样，性能也是不一样的，越往后的页数越容易出现慢查询，而mysqldumpslow把所有翻页sql当成一个sql了**
+2. eg：`select * from tb_table where uid=20 group by createtime limit 10000, 1000;` ==> `select * from tb_table where uid=N group by createtime limit N, N;`
     - 不管你uid和limit怎么变，mysqldumpslow认为是一样的
 
 ---
