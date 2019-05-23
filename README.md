@@ -23,6 +23,11 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
         - [3.JetBrains系列快捷键](#3jetbrains%E7%B3%BB%E5%88%97%E5%BF%AB%E6%8D%B7%E9%94%AE)
         - [4.VI快捷键：](#4vi%E5%BF%AB%E6%8D%B7%E9%94%AE)
     - [1.Web](#1web)
+        - [1.1.多平台](#11%E5%A4%9A%E5%B9%B3%E5%8F%B0)
+            - [1.1.1.Taro（推荐）](#111taro%E6%8E%A8%E8%8D%90)
+            - [1.1.2.MPVue（潜力）](#112mpvue%E6%BD%9C%E5%8A%9B)
+            - [1.1.3.Chameleon](#113chameleon)
+        - [1.2.xxx](#12xxx)
     - [2.Python](#2python)
         - [2.1.调试](#21%E8%B0%83%E8%AF%95)
         - [2.2.Asyncio](#22asyncio)
@@ -41,7 +46,9 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
                 - [3.1.MyCat](#31mycat)
                 - [3.2.DBProxy](#32dbproxy)
                 - [3.3.Atlas](#33atlas)
-            - [4.测试](#4%E6%B5%8B%E8%AF%95)
+            - [4.运维](#4%E8%BF%90%E7%BB%B4)
+                - [4.1.慢查询工具](#41%E6%85%A2%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7)
+            - [5.测试](#5%E6%B5%8B%E8%AF%95)
                 - [SQLer](#sqler)
         - [3.2.NoSQL](#32nosql)
             - [3.2.1.集群系](#321%E9%9B%86%E7%BE%A4%E7%B3%BB)
@@ -242,6 +249,70 @@ PS：想要不高亮显示就/xxx查找一个不存在的即可
 
 ## 1.Web
 
+### 1.1.多平台
+
+**逆天点评：目前来说：`Taro`市面上的资料比`MPVue`略多，可能从`填坑躺雷`角度来说`Taro`更成熟**（毕竟早几年出来）而`chameleon`暂时没看到显著优势（性能 or 便捷）
+> `MPVue`是`Vue`语法，`Taro`是`React`语法，看个人偏爱，这两个都是支持`微信`/`百度`/`支付宝`等多个小程序（一份代码多端运行，包括`H5`）
+
+PS：`Vue`和`React`是前端两大擎天柱，国内`Vue`多点，国外`React`多点（从世界范围看，`React`第一，`Vue`第二
+> 微信小程序官方推荐：<https://github.com/Tencent/wepy>
+
+#### 1.1.1.Taro（推荐）
+
+**【推荐】Taro京东开源的多端统一框架**（`小程序`，`H5`，`ReactNative`）
+> <https://github.com/LessChina/taro>
+
+```shell
+逆天点评：这个之前我有提到过
+
+最近百度小程序也比较火，大有超越微信小程序的趋势，这款也支持百度小程序和支付宝小程序了
+
+前端大一统早就是经常提的，Taro就是这一款开发框架（采用`React`语法标准，支持`JSX`和`TypeScript`）
+
+最重要的是有个强大的后盾~`京东`，而且这款开源的确是京东为数不多的良心之作了，希望不要和360一样，各种开源胎死腹中......
+
+相关链接：
+https://taro.aotu.io
+https://nervjs.github.io/taro
+https://github.com/NervJS/awesome-taro
+https://nervjs.github.io/taro/docs/README.html
+https://juejin.im/book/5b73a131f265da28065fb1cd
+
+https://nerv.aotu.io
+https://nervjs.github.io/docs
+
+京东前端团队：https://aotu.io
+https://github.com/NervJS
+https://github.com/o2team
+```
+
+小程序市场分析：https://baijiahao.baidu.com/s?id=1612578358728437062
+
+#### 1.1.2.MPVue（潜力）
+
+**美团开发的一款基于Vue.JS的小程序开发框架**：
+> <https://github.com/LessChina/mpvue>
+
+架构图：
+
+![架构](https://img2018.cnblogs.com/blog/1127869/201905/1127869-20190523112632147-781323848.jpg)
+
+#### 1.1.3.Chameleon
+
+又一款多平台开发的利器：`chameleon`
+> <https://github.com/lotapp/chameleon>
+
+架构图：
+
+![架构](https://img2018.cnblogs.com/blog/1127869/201905/1127869-20190523110343982-1338328075.png)
+
+头条小程序的案例：
+> <https://github.com/lotapp/cml-tt-sets>
+
+### 1.2.xxx
+
+---
+
 ## 2.Python
 
 扩展：<https://github.com/lotapp/awesome-python-cn>
@@ -285,9 +356,6 @@ PS：案例：<https://github.com/numba/numba-examples>
 ### 3.1.SQL
 
 扩展：<https://github.com/lotapp/awesome-mysql-cn>
-
-**MySQL常用工具包**：
-> <https://www.percona.com/doc/percona-toolkit/3.0/index.html>
 
 #### 1.优化
 
@@ -438,7 +506,53 @@ PS：MyCat性能提升版
 PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是基于它的拓展
 > <https://github.com/lotapp/Atlas>
 
-#### 4.测试
+#### 4.运维
+
+**MySQL常用工具包**：[percona-toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html) | [离线包](https://www.percona.com/downloads/percona-toolkit/LATEST/)
+
+##### 4.1.慢查询工具
+
+推荐两款：
+
+1.自带的慢日志分析工具：**mysqldumpslow**：
+> **查询最慢的10条SQL：`mysqldumpslow -s t -t 10 /var/lib/mysql/localhost-slow.log`**
+
+```shell
+-s 按照那种方式排序
+    t: 查询时间
+    c：访问计数
+    l：锁定时间
+    r:返回记录
+    al：平均锁定时间
+    ar：平均访问记录数
+    at：平均查询时间
+-t 返回多少条数据（可以理解为top n）
+-g 可以跟上正则匹配模式，大小写不敏感。
+```
+
+PS：使用mysqldumpslow的分析结果不会显示具体完整的sql语句：
+
+- **翻页sql不一样，也性能也是不一样，越往后的页数越看你参数慢查询，而mysqldumpslow把所有翻页sql当成一个sql了**
+- eg：`select * from tb_table where uid=20 group by createtime limit 10000, 1000;` ==> `select * from tb_table where uid=N group by createtime limit N, N;`
+    - 不管你uid和limit怎么变，mysqldumpslow认为是一样的
+
+---
+
+2.`percona-toolkit`中的 **`pt-query-digest`**（[官方文档](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html)）
+> **分析慢查询日志：`pt-query-digest /var/lib/mysql/localhost-slow.log`**
+
+1. 使用tcppdump捕获MySQL协议数据，然后报告最慢的查询：
+    - `tcpdump -s 65535 -x -nn -q -tttt -i any -c 1000 port 3306 > mysql.tcp.txt`
+    - `pt-query-digest --type tcpdump mysql.tcp.txt`
+2. 查看来自远程进程列表上最慢的查询：
+    - `pt-query-digest --processlist h=ip`
+
+---
+
+PS：还有一款**`mysqlsla`**我没用过，所以贴个参考文章，感兴趣的同志自己研究下
+> <https://www.cnblogs.com/fengchi/p/6187099.html>
+
+#### 5.测试
 
 ##### SQLer
 
