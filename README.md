@@ -42,10 +42,11 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
                 - [1.2.SQLAdvisor](#12sqladvisor)
             - [2.抓包](#2%E6%8A%93%E5%8C%85)
                 - [2.1.go-sniffer](#21go-sniffer)
-            - [3.代理](#3%E4%BB%A3%E7%90%86)
-                - [3.1.MyCat](#31mycat)
-                - [3.2.DBProxy](#32dbproxy)
-                - [3.3.Atlas](#33atlas)
+            - [3.中间件](#3%E4%B8%AD%E9%97%B4%E4%BB%B6)
+                - [3.1.MyCat（常用）](#31mycat%E5%B8%B8%E7%94%A8)
+                - [3.2.DBProxy and Atlas](#32dbproxy-and-atlas)
+                - [3.3.kingshard（热门）](#33kingshard%E7%83%AD%E9%97%A8)
+                - [3.4.Gaea（潜力）](#34gaea%E6%BD%9C%E5%8A%9B)
             - [4.运维](#4%E8%BF%90%E7%BB%B4)
                 - [4.1.慢查询工具](#41%E6%85%A2%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7)
             - [5.测试](#5%E6%B5%8B%E8%AF%95)
@@ -250,6 +251,9 @@ PS：想要不高亮显示就/xxx查找一个不存在的即可
 ---
 
 ## 1.Web
+
+**未来趋势：分布式无服务的前端架构**：
+> <https://juejin.im/post/5cdc3dc2e51d453b6c1d9d3a>
 
 ### 1.1.多平台
 
@@ -484,9 +488,9 @@ SQL中的子查询、or条件、使用函数的条件 会忽略不处理
 
 ---
 
-#### 3.代理
+#### 3.中间件
 
-##### 3.1.MyCat
+##### 3.1.MyCat（常用）
 
 **【推荐】常用中间件：`Mycat`**（性能一直是个问题）
 > <https://github.com/lotapp/Mycat-Server>
@@ -494,7 +498,7 @@ SQL中的子查询、or条件、使用函数的条件 会忽略不处理
 PS：MyCat性能提升版
 > <https://github.com/lotapp/Mycat2>
 
-##### 3.2.DBProxy
+##### 3.2.DBProxy and Atlas
 
 **【推荐】美团开源数据库代理**：
 > <https://github.com/lotapp/DBProxy>
@@ -503,10 +507,27 @@ PS：MyCat性能提升版
 
 ![管理](https://raw.githubusercontent.com/lotapp/DBProxy/master/doc/img/dbproxy-function.jpg)
 
-##### 3.3.Atlas
-
 PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是基于它的拓展
 > <https://github.com/lotapp/Atlas>
+
+##### 3.3.kingshard（热门）
+
+**【推荐】Go开发的高性能MySQLProxy**：
+> <https://github.com/lotapp/kingshard>
+
+架构：
+
+![架构](https://camo.githubusercontent.com/f6498f3e325d1d8cfc8a8b1b3dcc46ab3ee8050a/687474703a2f2f7777342e73696e61696d672e636e2f6c617267652f3665353730356135677731657632367a68796d6c336a3230716f306b306467722e6a7067)
+
+PS：作者录制了讲解的视频：<https://www.imooc.com/learn/1078>
+
+##### 3.4.Gaea（潜力）
+
+**【推荐】小米基于mysql协议开源的数据库中间件，支持分库分表、sql路由、读写分离、连接池等基本特性**：
+> <https://github.com/lotapp/Gaea>
+
+自述：分库分表方案兼容了`mycat`和`kingshard`两个项目的路由方式，在设计、实现阶段参照了`mycat`、`kingshard`和`vitess`，并使用`tidb parser`作为内置的`sql parser`
+> ![架构](https://raw.githubusercontent.com/lotapp/Gaea/master/docs/assets/architecture.png)
 
 #### 4.运维
 
