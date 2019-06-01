@@ -89,6 +89,7 @@ PS：VSCode的`Markdown All in One`插件，列表选项卡只有3个空格的�
 2. 扩展：`Python Extension Pack`
 3. **`Python Preview`**：预览的时候**图示执行过程**
 4. 类型检查：**`pyright`**
+5. Jupyter Notebook预览插件：`VS Code Jupyter Notebook Previewer`
 
 pyright的说明：<https://github.com/Microsoft/pyright>
 
