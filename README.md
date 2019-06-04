@@ -44,13 +44,17 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
                 - [2.1.go-sniffer](#21go-sniffer)
             - [3.中间件](#3%E4%B8%AD%E9%97%B4%E4%BB%B6)
                 - [3.1.MyCat（常用）](#31mycat%E5%B8%B8%E7%94%A8)
-                - [3.2.DBProxy and Atlas](#32dbproxy-and-atlas)
+                - [3.1.Sharding-JDBC（常用）](#31sharding-jdbc%E5%B8%B8%E7%94%A8)
+                - [3.2.DBProxy(基于Atlas) or Zebra](#32dbproxy%E5%9F%BA%E4%BA%8Eatlas-or-zebra)
                 - [3.3.kingshard（热门）](#33kingshard%E7%83%AD%E9%97%A8)
                 - [3.4.Gaea（潜力）](#34gaea%E6%BD%9C%E5%8A%9B)
-            - [4.运维](#4%E8%BF%90%E7%BB%B4)
-                - [4.1.慢查询工具](#41%E6%85%A2%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7)
-            - [5.测试](#5%E6%B5%8B%E8%AF%95)
-                - [SQLer](#sqler)
+                - [3.5.Other](#35other)
+            - [4.binlog](#4binlog)
+                - [4.1.Canal](#41canal)
+            - [5.运维](#5%E8%BF%90%E7%BB%B4)
+                - [5.1.慢查询工具](#51%E6%85%A2%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7)
+            - [6.测试](#6%E6%B5%8B%E8%AF%95)
+                - [6.1.SQLer](#61sqler)
         - [3.2.NoSQL](#32nosql)
             - [3.2.1.集群系](#321%E9%9B%86%E7%BE%A4%E7%B3%BB)
                 - [1.Codis](#1codis)
@@ -499,7 +503,17 @@ SQL中的子查询、or条件、使用函数的条件 会忽略不处理
 PS：MyCat性能提升版
 > <https://github.com/lotapp/Mycat2>
 
-##### 3.2.DBProxy and Atlas
+##### 3.1.Sharding-JDBC（常用）
+
+`Sharding-JDBC`之前是当当开源的，后来用的人多了，生态圈完善了之后就贡献给了Apache
+> <https://github.com/lotapp/Sharding-JDBC>
+
+![架构](https://static.oschina.net/uploads/space/2018/1112/110017_jW49_2720166.png)
+
+对比图:
+![对比](https://img2018.cnblogs.com/blog/1127869/201906/1127869-20190604232453985-20657530.png)
+
+##### 3.2.DBProxy(基于Atlas) or Zebra
 
 **【推荐】美团开源数据库代理**：
 > <https://github.com/lotapp/DBProxy>
@@ -510,6 +524,11 @@ PS：MyCat性能提升版
 
 PS：3年前我提过一次360开源的`MySQL中间层Atlas`，美团的也是基于它的拓展
 > <https://github.com/lotapp/Atlas>
+
+**扩展：美团还有一款Java开发的数据库中间件：`Zebra`**
+> <https://github.com/Meituan-Dianping/Zebra>
+
+![架构](https://img2018.cnblogs.com/blog/1127869/201906/1127869-20190604223728848-1693625017.png)
 
 ##### 3.3.kingshard（热门）
 
@@ -530,7 +549,116 @@ PS：作者录制了讲解的视频：<https://www.imooc.com/learn/1078>
 自述：分库分表方案兼容了`mycat`和`kingshard`两个项目的路由方式，在设计、实现阶段参照了`mycat`、`kingshard`和`vitess`，并使用`tidb parser`作为内置的`sql parser`
 > ![架构](https://raw.githubusercontent.com/lotapp/Gaea/master/docs/assets/architecture.png)
 
-#### 4.运维
+##### 3.5.Other
+
+**DAL是携程框架部开发的数据库访问框架，支持代码生成和水平扩展**：
+> <https://github.com/lotapp/dal>
+
+1. Dal的定位是数据库访问层。是以数据访问类（dao）的形式出现。Dal包括生成的dao代码和dal client底层api。Dal底层使用标准的数据库访问协议访问实际的数据库。
+2. Dal本身不是数据库，也不实现数据库协议。Dal依赖具体的数据库实现数据访问的工作。
+3. Dal主要功能是ORM，sharding等。Dal支持简单的基于单库的事务，但dal不支持分布式事务
+4. Dal也不支持数据库同步工作。数据库同步请使用数据库自带或第三方工具
+
+PS：Net和Java用的比较多些
+
+#### 4.binlog
+
+##### 4.1.Canal
+
+**【推荐】阿里巴巴mysql数据库binlog的增量订阅组件**：
+> <https://github.com/LessChina/canal>
+
+```shell
+Golang：https://github.com/CanalClient/canal-go
+NetCore：https://github.com/CanalClient/CanalSharp
+```
+
+![架构](https://camo.githubusercontent.com/46c626b4cde399db43b2634a7911a04aecf273a0/687474703a2f2f646c2e69746579652e636f6d2f75706c6f61642f6174746163686d656e742f303038302f333130372f63383762363762612d333934632d333038362d393537372d3964623035626530346339352e6a7067)
+
+基于日志增量订阅&消费支持的业务：
+
+1. 数据库镜像
+2. **数据库实时备份**
+3. 多级索引 (卖家和买家各自分库索引)
+4. search build
+5. **业务cache刷新**
+6. **价格变化等重要业务消息**
+
+原理相对比较简单：
+
+1. canal模拟mysql slave的交互协议，伪装自己为mysql slave，向mysql master发送dump协议
+2. mysql master收到dump请求，开始推送binary log给slave(也就是canal)
+3. canal解析binary log对象(原始为byte流)
+
+**PS：支持kafka消息投递 and 支持prometheus监控**
+
+**1.MySQL配置：**
+
+```shell
+[mysqld]
+log-bin=mysql-bin # 添加这一行就ok
+binlog-format=ROW # 选择row模式
+server_id=1 # 配置mysql replaction需要定义，不能和canal的slaveId重复
+```
+canal的原理是模拟自己为mysql slave，所以这里一定需要做为mysql slave的相关权限:（针对已有的账户可直接通过grant）
+
+```sql
+CREATE USER canal IDENTIFIED BY 'canal';  
+GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'canal'@'%';
+-- GRANT ALL PRIVILEGES ON *.* TO 'canal'@'%' ;
+FLUSH PRIVILEGES;
+```
+
+**2.建立与Canal的连接demo：**
+![client](https://github.com/CanalClient/CanalSharp/raw/master/assets/668104-20180925182816462-2110152563.png)
+
+```csharp
+Install-Package CanalSharp.Client
+
+//canal 配置的 destination，默认为 example
+var destination = "example";
+//创建一个简单CanalClient连接对象（此对象不支持集群）传入参数分别为 canal地址、端口、destination、用户名、密码
+var connector = CanalConnectors.NewSingleConnector("127.0.0.1", 11111, destination, "", "");
+//连接 Canal
+connector.Connect();
+//订阅，同时传入Filter，如果不传则以Canal的Filter为准。Filter是一种过滤规则，通过该规则的表数据变更才会传递过来
+connector.Subscribe(".*\\\\..*");
+//获取数据但是不需要发送Ack来表示消费成功
+connector.Get(batchSize);
+//获取数据并且需要发送Ack表示消费成功
+// connector.GetWithoutAck(batchSize);
+```
+
+**3.测试**：
+
+```sql
+insert into test values(1000,'111');
+update test set name='222' where id=1000;
+delete from test where id=1000;
+```
+
+![client](https://github.com/CanalClient/CanalSharp/raw/master/assets/ys.gif)
+
+Kafka接入参考：https://github.com/alibaba/canal/wiki/Canal-Kafka-RocketMQ-QuickStart
+
+---
+
+**阿里巴巴分布式数据库同步系统**：
+> <https://github.com/alibaba/otter>
+
+![架构](https://camo.githubusercontent.com/2988fbbc7ddfe94ed027cd71720b1ffa5912a635/687474703a2f2f646c322e69746579652e636f6d2f75706c6f61642f6174746163686d656e742f303038382f313138392f64343230636131342d326438302d336435352d383038312d6239303833363036613830312e6a7067)
+
+原理描述：
+
+1. 基于**Canal**开源产品，获取数据库增量日志数据
+2. 基于**zookeeper**，解决分布式状态调度的，允许多node节点之间协同工作.
+3. 典型管理系统架构，manager(web管理)+node(工作节点)
+    - manager运行时推送同步配置到node节点
+    - node节点将同步状态反馈到manager上
+
+PS：**解决异地机房数据同步问题**
+
+#### 5.运维
 
 **MySQL常用工具包**：[percona-toolkit](https://www.percona.com/downloads/percona-toolkit/LATEST/)
 > 官方文档：<https://www.percona.com/doc/percona-toolkit/LATEST/index.html>
@@ -615,7 +743,7 @@ Running transaction
 完毕！
 ```
 
-##### 4.1.慢查询工具
+##### 5.1.慢查询工具
 
 先简单分析下慢查询日志：
 
@@ -675,9 +803,9 @@ PS：使用mysqldumpslow的分析结果不会显示具体完整的sql语句：
 PS：还有一款**`mysqlsla`**我没用过，所以贴个参考文章，感兴趣的同志自己研究下
 > <https://www.cnblogs.com/fengchi/p/6187099.html>
 
-#### 5.测试
+#### 6.测试
 
-##### SQLer
+##### 6.1.SQLer
 
 **【推荐】根据SQL和配置文件生成接口的工具（支持`SQLServer` and `MySQL`）**
 > <https://github.com/lotapp/sqler>
