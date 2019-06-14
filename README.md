@@ -26,7 +26,8 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
         - [1.1.多平台](#11%E5%A4%9A%E5%B9%B3%E5%8F%B0)
             - [1.1.1.Taro（推荐）](#111taro%E6%8E%A8%E8%8D%90)
             - [1.1.2.MPVue（潜力）](#112mpvue%E6%BD%9C%E5%8A%9B)
-            - [1.1.3.Chameleon](#113chameleon)
+            - [1.1.3.Chameleon（观察中）](#113chameleon%E8%A7%82%E5%AF%9F%E4%B8%AD)
+            - [1.1.4.Flutter（APP）](#114flutterapp)
         - [1.2.xxx](#12xxx)
     - [2.Python](#2python)
         - [2.1.调试](#21%E8%B0%83%E8%AF%95)
@@ -262,7 +263,7 @@ PS：想要不高亮显示就/xxx查找一个不存在的即可
 
 ### 1.1.多平台
 
-**逆天点评：目前来说：`Taro`市面上的资料比`MPVue`略多，可能从`填坑躺雷`角度来说`Taro`更成熟**（毕竟早几年出来）而`chameleon`暂时没看到显著优势（性能 or 便捷）
+**逆天点评：目前来说：`Taro`市面上的资料比`MPVue`略多，可能从`填坑躺雷`角度来说`Taro`更成熟**（毕竟早几年出来）`chameleon`正在观察中
 > `MPVue`是`Vue`语法，`Taro`是`React`语法，看个人偏爱，这两个都是支持`微信`/`百度`/`支付宝`等多个小程序（一份代码多端运行，包括`H5`）
 
 PS：`Vue`和`React`是前端两大擎天柱，国内`Vue`多点，国外`React`多点（从世界范围看，`React`第一，`Vue`第二
@@ -308,9 +309,9 @@ https://github.com/o2team
 
 ![架构](https://img2018.cnblogs.com/blog/1127869/201905/1127869-20190523112632147-781323848.jpg)
 
-#### 1.1.3.Chameleon
+#### 1.1.3.Chameleon（观察中）
 
-又一款多平台开发的利器：`chameleon`
+滴滴开源的一款多平台开发的利器：`chameleon`
 > <https://github.com/lotapp/chameleon>
 
 架构图：
@@ -319,6 +320,15 @@ https://github.com/o2team
 
 头条小程序的案例：
 > <https://github.com/lotapp/cml-tt-sets>
+
+#### 1.1.4.Flutter（APP）
+
+**Flutter快速入门demo**：
+> <https://github.com/alibaba/flutter-go>
+
+![导图](https://camo.githubusercontent.com/b59e4856a54d720712862c763ac3fade321e9dc9/68747470733a2f2f696d672e616c6963646e2e636f6d2f7466732f5442313955616851517a6f4b31526a535a466c58586169345658612d313530302d313130362e706e67)
+
+PS：可以把它当做`flutter`开发者帮助APP，里面包含`flutter`常用`140+`组件的`demo`演示与中文文档，你可以把它作为使用`Flutter`的示例
 
 ### 1.2.xxx
 
