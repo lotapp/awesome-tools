@@ -35,7 +35,12 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
         - [2.3.优化](#23%E4%BC%98%E5%8C%96)
             - [2.3.1.Numpy](#231numpy)
             - [2.3.2.Numba](#232numba)
-        - [2.3.todo](#23todo)
+        - [2.3.测试](#23%E6%B5%8B%E8%AF%95)
+            - [2.3.1.代码检测](#231%E4%BB%A3%E7%A0%81%E6%A3%80%E6%B5%8B)
+                - [1.Sonar](#1sonar)
+                - [2.Bandit](#2bandit)
+                - [3.PyType](#3pytype)
+                - [4.Other](#4other)
     - [3.DataBase](#3database)
         - [3.1.SQL](#31sql)
             - [1.优化](#1%E4%BC%98%E5%8C%96)
@@ -370,7 +375,35 @@ def function(x):
 PS：案例：<https://github.com/numba/numba-examples>
 > <https://github.com/lotapp/gtc2019-numba>
 
-### 2.3.todo
+### 2.3.测试
+
+#### 2.3.1.代码检测
+
+##### 1.Sonar
+
+**业内比较常用的是`SonarQube`**：
+> <https://www.sonarqube.org/features/multi-languages/>
+
+![图示](https://www.sonarqube.org/index/clean-code.png)
+
+##### 2.Bandit
+
+**Python代码安全漏洞检测工具**：
+> <https://github.com/lotapp/bandit>
+
+参考文章：<https://www.freebuf.com/sectool/204995.html>
+
+##### 3.PyType
+
+谷歌开源的**Python代码的静态类型分析器**：
+> <https://github.com/lotapp/pytype>
+
+##### 4.Other
+
+监视Python代码的**内存使用情况**的库：
+> <https://github.com/lotapp/memory_profiler>
+
+---
 
 ## 3.DataBase
 
