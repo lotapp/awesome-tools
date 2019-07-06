@@ -59,6 +59,7 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
                 - [4.1.Canal](#41Canal)
             - [5.运维](#5%E8%BF%90%E7%BB%B4)
                 - [MySQL常用工具包](#MySQL%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85)
+                - [SQLServer常用工具包](#SQLServer%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%8C%85)
                 - [5.1.慢查询工具](#51%E6%85%A2%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7)
             - [6.测试](#6%E6%B5%8B%E8%AF%95)
                 - [6.1.SQLer](#61SQLer)
@@ -790,6 +791,13 @@ Running transaction
 
 完毕！
 ```
+
+##### SQLServer常用工具包
+
+一般都是使用`RedGate`的工具：[www.red-gate.com](https://www.red-gate.com/products/)
+> PS：就是出`NET Reflector`的那家公司
+
+![RedGate](https://img2018.cnblogs.com/blog/1127869/201907/1127869-20190706201412111-1019779719.png)
 
 ##### 5.1.慢查询工具
 
