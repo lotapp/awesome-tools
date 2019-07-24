@@ -1,5 +1,6 @@
 - [2019](#2019)
   - [七月](#%e4%b8%83%e6%9c%88)
+    - [2019-07-17](#2019-07-17)
     - [2019-07-16](#2019-07-16)
     - [2019-07-15](#2019-07-15)
     - [2019-07-13](#2019-07-13)
@@ -143,13 +144,21 @@
 
 # 2019
 
-2019目标：
+2019目标（选2）
 
-1. Python全栈
-2. Go语言基础
-3. 大前端全栈
+1. **Python全栈**
+2. 大前端全栈
+3. Go语言基础
+4. ReStart Safe
 
 ## 七月
+
+### 2019-07-17
+
+**Nginx书籍**：
+> 1. **Nginx Cookbook 中文版**：<https://huliuqing.gitbooks.io/complete-nginx-cookbook-zh/content/>
+> 2. Nginx中文文档(官方)：<https://docshome.gitbooks.io/nginx-docs/content/>
+> 3. Nginx入门教程：<https://xuexb.github.io/learn-nginx/>
 
 ### 2019-07-16
 
