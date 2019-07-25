@@ -160,6 +160,8 @@
 > 2. Nginx中文文档(官方)：<https://docshome.gitbooks.io/nginx-docs/content/>
 > 3. Nginx入门教程：<https://xuexb.github.io/learn-nginx/>
 
+华为镜像站：<https://mirrors.huaweicloud.com/>
+
 ### 2019-07-16
 
 **【推荐】育儿百科**：
