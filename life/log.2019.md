@@ -1,5 +1,6 @@
 - [2019](#2019)
   - [七月](#%e4%b8%83%e6%9c%88)
+    - [2019-07-19](#2019-07-19)
     - [2019-07-18](#2019-07-18)
     - [2019-07-17](#2019-07-17)
     - [2019-07-16](#2019-07-16)
@@ -154,7 +155,15 @@
 
 ## 七月
 
+### 2019-07-19
+
+**【推荐】常用的`Nginx+Lua`防火墙**
+> <https://github.com/lotapp/ngx_lua_waf>
+
 ### 2019-07-18
+
+**微软官方出品的Python学习教程**：
+> <https://docs.microsoft.com/zh-cn/windows/python/>
 
 **Django开发的电子商务系统**：
 > <https://github.com/django-oscar/django-oscar>

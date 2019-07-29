@@ -7,76 +7,77 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
 > **常用解决方案**：<https://github.com/LessChina>
 
 - [逆天开发库](#%e9%80%86%e5%a4%a9%e5%bc%80%e5%8f%91%e5%ba%93)
-    - [IDE](#ide)
-        - [1.VSCode推荐插件](#1vscode%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6)
-            - [1.1.Public](#11public)
-            - [1.2.Python](#12python)
-            - [1.3.JavaScript](#13javascript)
-            - [1.4.DataBase](#14database)
-            - [1.5.xxx](#15xxx)
-            - [1.6.NetCore](#16netcore)
-            - [other](#other)
-        - [2.NoteBook快捷键](#2notebook%e5%bf%ab%e6%8d%b7%e9%94%ae)
-            - [2.1.编辑模式快捷键](#21%e7%bc%96%e8%be%91%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
-            - [2.2.命令模式快捷键](#22%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
-            - [2.3.设置系列](#23%e8%ae%be%e7%bd%ae%e7%b3%bb%e5%88%97)
-        - [3.JetBrains系列快捷键](#3jetbrains%e7%b3%bb%e5%88%97%e5%bf%ab%e6%8d%b7%e9%94%ae)
-        - [4.VI快捷键：](#4vi%e5%bf%ab%e6%8d%b7%e9%94%ae)
-    - [1.Web](#1web)
-        - [1.1.多平台](#11%e5%a4%9a%e5%b9%b3%e5%8f%b0)
-            - [1.1.1.Taro（推荐）](#111taro%e6%8e%a8%e8%8d%90)
-            - [1.1.2.MPVue（潜力）](#112mpvue%e6%bd%9c%e5%8a%9b)
-            - [1.1.3.Chameleon（观察中）](#113chameleon%e8%a7%82%e5%af%9f%e4%b8%ad)
-            - [1.1.4.Flutter（APP）](#114flutterapp)
-        - [1.2.xxx](#12xxx)
-    - [2.Python](#2python)
-        - [2.1.调试](#21%e8%b0%83%e8%af%95)
-        - [2.2.Asyncio](#22asyncio)
-        - [2.3.优化](#23%e4%bc%98%e5%8c%96)
-            - [2.3.1.Numpy](#231numpy)
-            - [2.3.2.Numba](#232numba)
-        - [2.3.测试](#23%e6%b5%8b%e8%af%95)
-            - [2.3.1.代码检测](#231%e4%bb%a3%e7%a0%81%e6%a3%80%e6%b5%8b)
-                - [1.Sonar](#1sonar)
-                - [2.Bandit](#2bandit)
-                - [3.PyType](#3pytype)
-                - [4.Other](#4other)
-    - [3.DataBase](#3database)
-        - [3.1.SQL](#31sql)
-            - [1.优化](#1%e4%bc%98%e5%8c%96)
-                - [1.1.Soar](#11soar)
-                - [1.2.SQLAdvisor](#12sqladvisor)
-            - [2.抓包](#2%e6%8a%93%e5%8c%85)
-                - [2.1.go-sniffer](#21go-sniffer)
-            - [3.中间件](#3%e4%b8%ad%e9%97%b4%e4%bb%b6)
-                - [3.1.MyCat（常用）](#31mycat%e5%b8%b8%e7%94%a8)
-                - [3.1.Sharding-JDBC（常用）](#31sharding-jdbc%e5%b8%b8%e7%94%a8)
-                - [3.2.DBProxy(基于Atlas) or Zebra](#32dbproxy%e5%9f%ba%e4%ba%8eatlas-or-zebra)
-                - [3.3.kingshard（热门）](#33kingshard%e7%83%ad%e9%97%a8)
-                - [3.4.Gaea（潜力）](#34gaea%e6%bd%9c%e5%8a%9b)
-                - [3.5.Other](#35other)
-            - [4.binlog](#4binlog)
-                - [4.1.Canal](#41canal)
-            - [5.运维](#5%e8%bf%90%e7%bb%b4)
-                - [MySQL常用工具包](#mysql%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7%e5%8c%85)
-                - [SQLServer常用工具包](#sqlserver%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7%e5%8c%85)
-                - [5.1.慢查询工具](#51%e6%85%a2%e6%9f%a5%e8%af%a2%e5%b7%a5%e5%85%b7)
-            - [6.测试](#6%e6%b5%8b%e8%af%95)
-                - [6.1.SQLer](#61sqler)
-        - [3.2.NoSQL](#32nosql)
-            - [3.2.1.集群系](#321%e9%9b%86%e7%be%a4%e7%b3%bb)
-                - [1.Codis](#1codis)
-                - [2.TwemProxy](#2twemproxy)
-                - [3.overlord](#3overlord)
-                - [扩展](#%e6%89%a9%e5%b1%95)
-            - [3.2.2.私有云](#322%e7%a7%81%e6%9c%89%e4%ba%91)
-        - [3.3.多功能工具](#33%e5%a4%9a%e5%8a%9f%e8%83%bd%e5%b7%a5%e5%85%b7)
-    - [4.Spark](#4spark)
-    - [5.Architecuture](#5architecuture)
-        - [5.1.常用算法](#51%e5%b8%b8%e7%94%a8%e7%ae%97%e6%b3%95)
-            - [5.1.1.分布式ID](#511%e5%88%86%e5%b8%83%e5%bc%8fid)
-            - [5.1.2.布隆过滤](#512%e5%b8%83%e9%9a%86%e8%bf%87%e6%bb%a4)
-    - [6.System](#6system)
+  - [IDE](#ide)
+    - [1.VSCode推荐插件](#1vscode%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6)
+      - [1.1.Public](#11public)
+      - [1.2.Python](#12python)
+      - [1.3.JavaScript](#13javascript)
+      - [1.4.DataBase](#14database)
+      - [1.5.xxx](#15xxx)
+      - [1.6.NetCore](#16netcore)
+      - [other](#other)
+    - [2.NoteBook快捷键](#2notebook%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.1.编辑模式快捷键](#21%e7%bc%96%e8%be%91%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.2.命令模式快捷键](#22%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.3.设置系列](#23%e8%ae%be%e7%bd%ae%e7%b3%bb%e5%88%97)
+    - [3.JetBrains系列快捷键](#3jetbrains%e7%b3%bb%e5%88%97%e5%bf%ab%e6%8d%b7%e9%94%ae)
+    - [4.VI快捷键：](#4vi%e5%bf%ab%e6%8d%b7%e9%94%ae)
+  - [1.Web](#1web)
+    - [1.1.多平台](#11%e5%a4%9a%e5%b9%b3%e5%8f%b0)
+      - [1.1.1.Taro（推荐）](#111taro%e6%8e%a8%e8%8d%90)
+      - [1.1.2.MPVue（潜力）](#112mpvue%e6%bd%9c%e5%8a%9b)
+      - [1.1.3.Chameleon（观察中）](#113chameleon%e8%a7%82%e5%af%9f%e4%b8%ad)
+      - [1.1.4.Flutter（APP）](#114flutterapp)
+    - [1.2.xxx](#12xxx)
+  - [2.Python](#2python)
+    - [2.1.调试](#21%e8%b0%83%e8%af%95)
+      - [2.1.1.PySnooper](#211pysnooper)
+    - [2.2.Asyncio](#22asyncio)
+    - [2.3.优化](#23%e4%bc%98%e5%8c%96)
+      - [2.3.1.Numpy](#231numpy)
+      - [2.3.2.Numba](#232numba)
+    - [2.3.测试](#23%e6%b5%8b%e8%af%95)
+      - [2.3.1.代码检测](#231%e4%bb%a3%e7%a0%81%e6%a3%80%e6%b5%8b)
+        - [1.Sonar](#1sonar)
+        - [2.Bandit](#2bandit)
+        - [3.PyType](#3pytype)
+        - [4.Other](#4other)
+  - [3.DataBase](#3database)
+    - [3.1.SQL](#31sql)
+      - [1.优化](#1%e4%bc%98%e5%8c%96)
+        - [1.1.Soar](#11soar)
+        - [1.2.SQLAdvisor](#12sqladvisor)
+      - [2.抓包](#2%e6%8a%93%e5%8c%85)
+        - [2.1.go-sniffer](#21go-sniffer)
+      - [3.中间件](#3%e4%b8%ad%e9%97%b4%e4%bb%b6)
+        - [3.1.MyCat（常用）](#31mycat%e5%b8%b8%e7%94%a8)
+        - [3.1.Sharding-JDBC（常用）](#31sharding-jdbc%e5%b8%b8%e7%94%a8)
+        - [3.2.DBProxy(基于Atlas) or Zebra](#32dbproxy%e5%9f%ba%e4%ba%8eatlas-or-zebra)
+        - [3.3.kingshard（热门）](#33kingshard%e7%83%ad%e9%97%a8)
+        - [3.4.Gaea（潜力）](#34gaea%e6%bd%9c%e5%8a%9b)
+        - [3.5.Other](#35other)
+      - [4.binlog](#4binlog)
+        - [4.1.Canal](#41canal)
+      - [5.运维](#5%e8%bf%90%e7%bb%b4)
+        - [MySQL常用工具包](#mysql%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7%e5%8c%85)
+        - [SQLServer常用工具包](#sqlserver%e5%b8%b8%e7%94%a8%e5%b7%a5%e5%85%b7%e5%8c%85)
+        - [5.1.慢查询工具](#51%e6%85%a2%e6%9f%a5%e8%af%a2%e5%b7%a5%e5%85%b7)
+      - [6.测试](#6%e6%b5%8b%e8%af%95)
+        - [6.1.SQLer](#61sqler)
+    - [3.2.NoSQL](#32nosql)
+      - [3.2.1.集群系](#321%e9%9b%86%e7%be%a4%e7%b3%bb)
+        - [1.Codis](#1codis)
+        - [2.TwemProxy](#2twemproxy)
+        - [3.overlord](#3overlord)
+        - [扩展](#%e6%89%a9%e5%b1%95)
+      - [3.2.2.私有云](#322%e7%a7%81%e6%9c%89%e4%ba%91)
+    - [3.3.多功能工具](#33%e5%a4%9a%e5%8a%9f%e8%83%bd%e5%b7%a5%e5%85%b7)
+  - [4.Spark](#4spark)
+  - [5.Architecuture](#5architecuture)
+    - [5.1.常用算法](#51%e5%b8%b8%e7%94%a8%e7%ae%97%e6%b3%95)
+      - [5.1.1.分布式ID](#511%e5%88%86%e5%b8%83%e5%bc%8fid)
+      - [5.1.2.布隆过滤](#512%e5%b8%83%e9%9a%86%e8%bf%87%e6%bb%a4)
+  - [6.System](#6system)
 
 ## IDE
 
@@ -91,7 +92,9 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
 2. JetBrains快捷键：**`IntelliJ IDEA Keybindings`**
 3. Git历史插件：**`Git History`**
 4. 微软开源的AI插件支持`C#, C++, TypeScript/JavaScript`：**`Visual Studio IntelliCode`**
-5. _项目图标：vscode-icons_
+5. 文件远程编辑：`Remote - SSH`
+   - 参考文章：<https://www.cnblogs.com/dotnetcrazy/p/11254225.html>
+6. _项目图标：vscode-icons_
 
 PS：VSCode的`Markdown All in One`插件，列表选项卡只有3个空格的解决方案:
 > <https://www.cnblogs.com/dotnetcrazy/p/10748165.html>
@@ -160,6 +163,7 @@ pyright的说明：<https://github.com/Microsoft/pyright>
     - 上传剪贴板图片：`Ctrl + Alt + U`
     - 上传本地的文件：`Ctrl + Alt + E`
 2. epub格式阅读：`epub reader`
+3. PHP相关：`PHP IntelliSense` and `PHP Debug`
 
 ---
 
@@ -347,6 +351,11 @@ PS：可以把它当做`flutter`开发者帮助APP，里面包含`flutter`常用
 扩展：<https://github.com/lotapp/awesome-python-cn>
 
 ### 2.1.调试
+
+#### 2.1.1.PySnooper
+
+**代替print输出的PY调试库：`PySnooper`**：
+> <https://www.cnblogs.com/dotnetcrazy/p/10848257.html>
 
 ### 2.2.Asyncio
 
