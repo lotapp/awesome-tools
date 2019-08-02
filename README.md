@@ -127,7 +127,7 @@ pyright的说明：<https://github.com/Microsoft/pyright>
 5. 自动给`CSS文件`添加不同浏览器的CSS3前缀：**`Autoprefixer`**
     - PS：会删除`-webkit-box-orient: vertical;` 记得手动添加一下（关注git文件对比就能快速定位）
 6. px转rem：**`cssrem`**
-    - PS：记得设置移动端默认字体大小：`"cssrem.rootFontSize": 20` 
+    - PS：记得设置移动端默认字体大小：`"cssrem.rootFontSize": 20`
 7. less编译为css：**`Easy LESS`**
 8. 查看语法兼容性：**`Can I Use`**
     - PS：搜索html5就能找到
