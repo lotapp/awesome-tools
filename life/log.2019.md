@@ -1,16 +1,17 @@
 - [2019](#2019)
   - [七月](#%e4%b8%83%e6%9c%88)
-    - [2019-07-31](#2019-07-31)
+    - [2019-07-30](#2019-07-30)
     - [2019-07-29（前端）](#2019-07-29%e5%89%8d%e7%ab%af)
     - [2019-07-27（Java）](#2019-07-27java)
     - [2019-07-25（Go）](#2019-07-25go)
     - [2019-07-23（推荐）](#2019-07-23%e6%8e%a8%e8%8d%90)
+    - [2019-07-22（资源）](#2019-07-22%e8%b5%84%e6%ba%90)
     - [2019-07-21](#2019-07-21)
     - [2019-07-19](#2019-07-19)
     - [2019-07-18](#2019-07-18)
     - [2019-07-17](#2019-07-17)
     - [2019-07-16](#2019-07-16)
-    - [2019-07-15](#2019-07-15)
+    - [2019-07-15（资源）](#2019-07-15%e8%b5%84%e6%ba%90)
     - [2019-07-13](#2019-07-13)
     - [2019-07-12](#2019-07-12)
     - [2019-07-10](#2019-07-10)
@@ -161,7 +162,34 @@
 
 ## 七月
 
-### 2019-07-31
+### 2019-07-30
+
+**【推荐】2019 年各互联网大厂最新内部技术分享的文档列表**：
+> <https://github.com/lotapp/from_coder_to_expert>
+
+**通过学生身份可以获取的福利列表**：JetBrains、Github、云服务器...
+> <https://github.com/lotapp/Student-resources>
+
+**【推荐】爬取智联招聘和链家的数据，展示了一系列可视化分析：生活成本、月薪与房价、工作机会、薪资、工作年限、房价等**：
+> <https://github.com/lotapp/getAwayBSG>
+
+![综合](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803062929585-1508147315.png)
+
+![月薪](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803062957476-756634195.png)
+
+**Python编码技巧**：
+> <https://github.com/lotapp/one-python-craftsman>
+
+**基于 plotly 和 pandas 的绘图库**:
+> <https://github.com/lotapp/cufflinks>
+
+**快速建站**：基于`ThinkPhp5.0 + Vue + EasyWeChat`开发的一套商城系统(集客户关系管理+营销电商系统)
+> <https://github.com/lotapp/CRMEB>
+
+![php](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803060705182-1861743579.png)
+
+PS：帮助企业基于微信公众号、小程序、PC、APP 等，实现会员管理、数据分析、精准营销的电子商务管理系统。**功能强大**
+> 小程序版：<https://github.com/lotapp/CRMEB_WeChatMiniProgram>
 
 ### 2019-07-29（前端）
 
@@ -178,6 +206,15 @@ JS常用工具库：
 > <https://github.com/lotapp/cdfang-spider>
 
 PS：此项目包含了一套完整的源代码，以及详细的项目搭建文档
+
+![web](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803055237510-912569216.png)
+
+**react的`css-in-js`库**（CSS、JS、HTML分离）
+> <https://github.com/lotapp/styled-components>
+
+![react](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803060127994-285821733.png)
+
+PS：Vue的`CSS in JS`库：<https://github.com/egoist/styled-vue>
 
 **一个 Vue 的单元测试项目**：
 > <https://github.com/holylovelqq/vue-unit-test-with-jest>
@@ -230,6 +267,8 @@ Java版机器人QA系统：
 **百度网盘不限速客户端**：golang + qt5
 > <https://github.com/lotapp/pan-light>
 
+![baidu](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803055151796-1185744534.png)
+
 **【推荐】基于 Golang 语言的 HTTP 路由库**（支持正则匹配路由）
 > <https://github.com/lotapp/mux>
 
@@ -247,7 +286,7 @@ r.HandleFunc("/articles/{category}/", ArticlesCategoryHandler)
 r.HandleFunc("/articles/{category}/{id:[0-9]+}", ArticleHandler)
 ```
 
-命令行UI库:
+**命令行UI库**：支持点击事件的命令行 UI 程序
 > <https://github.com/jroimartin/gocui>
 
 ### 2019-07-23（推荐）
@@ -285,6 +324,19 @@ scope launch
 
 ![scope](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802222834701-198766770.png)
 
+### 2019-07-22（资源）
+
+**SQLi的详细教程**（SQL注入）
+> <https://github.com/lotapp/sqli-labs>
+
+**【推荐】Flutter实战**：
+> <https://github.com/lotapp/flutter-in-action>
+
+PS：在线阅读：<https://book.flutterchina.club/>
+
+**介绍Go语法和语义的编程指导书**：
+> <https://github.com/lotapp/go101>
+
 ### 2019-07-21
 
 **Net常用类库**：
@@ -292,6 +344,11 @@ scope launch
 
 **微信PC加强版**：支持多开、防消息撤销、语音消息备份
 > <https://github.com/anhkgg/SuperWeChatPC>
+
+`git open`可以让浏览器自动打开对应的仓库
+> <https://github.com/paulirish/git-open>
+
+![git](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190803062309229-181226906.gif)
 
 ### 2019-07-19
 
@@ -326,9 +383,19 @@ scope launch
 **谷歌AI教育网站**：
 > <https://ai.google/education>
 
+**基于OpenAI的代码补全工具：支持多种IDE**：
+> <https://github.com/zxqfl/TabNine>
+
+PS：VSCode版：<https://github.com/zxqfl/tabnine-vscode>
+
+PyTorch-Hub：无论是 ResNet、BERT、GPT、VGG、PGAN 还是 MobileNet 等经典模型，只需输入一行代码，都能实现一键调用
+> <https://github.com/lotapp/hub>
+
+PS：**PyTorch教程**：<https://github.com/Eurus-Holmes/LIS-YNP>
+
 ---
 
-### 2019-07-15
+### 2019-07-15（资源）
 
 **【推荐】利用 GitHub 提供的 API 监控 Git 泄漏，并在检测到信息泄露的时候发送邮件通知**：
 > <https://github.com/lotapp/GithubMonitor>
@@ -351,6 +418,7 @@ scope launch
 > <https://github.com/lotapp/arrow>
 
 案例：
+
 ```py
 import arrow
 utc = arrow.utcnow()
