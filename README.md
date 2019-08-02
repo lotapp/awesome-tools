@@ -78,6 +78,12 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
       - [5.1.1.分布式ID](#511%e5%88%86%e5%b8%83%e5%bc%8fid)
       - [5.1.2.布隆过滤](#512%e5%b8%83%e9%9a%86%e8%bf%87%e6%bb%a4)
   - [6.System](#6system)
+    - [6.1.运维基础](#61%e8%bf%90%e7%bb%b4%e5%9f%ba%e7%a1%80)
+      - [6.1.1.内网映射：nps（推荐）](#611%e5%86%85%e7%bd%91%e6%98%a0%e5%b0%84nps%e6%8e%a8%e8%8d%90)
+    - [6.2.容器系列](#62%e5%ae%b9%e5%99%a8%e7%b3%bb%e5%88%97)
+      - [6.2.1.镜像分析](#621%e9%95%9c%e5%83%8f%e5%88%86%e6%9e%90)
+      - [6.2.2.镜像压缩](#622%e9%95%9c%e5%83%8f%e5%8e%8b%e7%bc%a9)
+      - [6.2.3.镜像管理](#623%e9%95%9c%e5%83%8f%e7%ae%a1%e7%90%86)
 
 ## IDE
 
@@ -1040,3 +1046,98 @@ PS：扩展 ~ `Snowflake算法`
 ---
 
 ## 6.System
+
+### 6.1.运维基础
+
+#### 6.1.1.内网映射：nps（推荐）
+
+**【推荐】又一款内网穿透神器**：提供服务端和客户端以及UI
+> <https://github.com/LessChina/nps>
+
+```shell
+go get -u github.com/cnlh/nps
+go build cmd/nps/nps.go # 服务端程序
+go build cmd/nps/npc.go # 客户端程序
+```
+
+![图示](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802220958810-386573284.png)
+
+---
+
+### 6.2.容器系列
+
+#### 6.2.1.镜像分析
+
+**【推荐】docker镜像分析工具**：可以理解为dive的GUI
+> <https://github.com/LessChina/diving>
+
+PS：基于`dive`来分析docker镜像，界面化展示了镜像每层的变动（增加、修改、删除等）、用户层数据大小等信息
+
+![demo](https://raw.githubusercontent.com/LessChina/diving/master/.data/demo.gif)
+
+**【推荐】用来探索`docker`镜像背后的每一层文件系统，以及发现缩小镜像体积方法的命令行工具（启动命令：`dive 镜像名`）**
+> <https://github.com/LessChina/dive>
+
+![dive](https://img2018.cnblogs.com/blog/1127869/201901/1127869-20190113121348513-1342193461.png)
+
+**分析正在运行的Docker容器的资源使用情况和性能特征**：
+> <https://github.com/LessChina/cadvisor>
+
+---
+
+**k8s**容器**间**关系**依赖**的**可视化**组件（通过图的方式解释微服务之间复杂的相互依赖关系）
+> <https://github.com/lotapp/scope>
+
+```shell
+# 安装
+sudo curl -L git.io/scope -o /usr/local/bin/scope
+sudo chmod a+x /usr/local/bin/scope
+scope launch
+# 最后访问 http://localhost:4040
+```
+
+![scope](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802222834701-198766770.png)
+
+#### 6.2.2.镜像压缩
+
+**【推荐】不改变内容缩小Docker镜像**：
+> <https://github.com/lotapp/docker-slim>
+
+PS：自动缩减docker镜像的体积的工具，方便分发
+> eg：`docker-slim build --http-probe your-name/your-app`
+
+```shell
+# 以NodeJS镜像为例：
+from ubuntu:16.04 - 432MB => 14MB (缩减了 30.85 倍)
+
+from debian:jessie - 406MB => 25.1MB (缩减了 16.21 倍)
+
+from node:alpine - 66.7MB => 34.7MB (缩减了 1.92 倍)
+```
+
+#### 6.2.3.镜像管理
+
+**【推荐】基于`Docker`的持续集成平台**
+> <https://github.com/lotapp/drone>
+
+![drone](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802222434834-271287882.png)
+
+**【推荐】企业级管理平台**：
+> <https://github.com/lotapp/rancher>
+
+**Docker终端管理工具**：
+> <https://github.com/lotapp/docui>
+
+```shell
+# 安装命令：
+go get -d github.com/skanehira/docui
+cd $GOPATH/src/github.com/skanehira/docui
+GO111MODULE=on go install
+```
+
+![docui](https://raw.githubusercontent.com/skanehira/docui/images/images/s3.png)
+
+更傻瓜式的：**【轻量级】带命令行 UI 的 docker 命令行 管理工具**:
+> <https://github.com/lotapp/lazydocker>
+
+![lazydocker](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802223625501-1088144162.png)
