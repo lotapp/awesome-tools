@@ -160,6 +160,9 @@
 **【推荐】常用的`Nginx+Lua`防火墙**
 > <https://github.com/lotapp/ngx_lua_waf>
 
+**【推荐】ES6参考手册**：
+> <https://es6.ruanyifeng.com/>
+
 ### 2019-07-18
 
 **微软官方出品的Python学习教程**：
