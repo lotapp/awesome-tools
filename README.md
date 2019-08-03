@@ -34,10 +34,11 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
       - [2.1.1.PySnooper](#211pysnooper)
     - [2.2.Asyncio](#22asyncio)
     - [2.3.优化](#23%e4%bc%98%e5%8c%96)
-      - [2.3.1.Numpy](#231numpy)
+      - [2.3.1.Numpy and Pandas](#231numpy-and-pandas)
       - [2.3.2.Numba](#232numba)
-    - [2.3.测试](#23%e6%b5%8b%e8%af%95)
-      - [2.3.1.代码检测](#231%e4%bb%a3%e7%a0%81%e6%a3%80%e6%b5%8b)
+      - [2.3.3.Cython](#233cython)
+    - [2.4.测试](#24%e6%b5%8b%e8%af%95)
+      - [2.4.1.代码检测](#241%e4%bb%a3%e7%a0%81%e6%a3%80%e6%b5%8b)
         - [1.Sonar](#1sonar)
         - [2.Bandit](#2bandit)
         - [3.PyType](#3pytype)
@@ -369,7 +370,9 @@ PS：可以把它当做`flutter`开发者帮助APP，里面包含`flutter`常用
 
 ### 2.3.优化
 
-#### 2.3.1.Numpy
+#### 2.3.1.Numpy and Pandas
+
+todo
 
 #### 2.3.2.Numba
 
@@ -393,9 +396,55 @@ def function(x):
 PS：案例：<https://github.com/numba/numba-examples>
 > <https://github.com/lotapp/gtc2019-numba>
 
-### 2.3.测试
+#### 2.3.3.Cython
 
-#### 2.3.1.代码检测
+**【推荐】Python小改动就能生成C代码**：
+> <https://github.com/cython/cython>
+
+Cython 语言是 Python 的一个超集，它包含有两种类型的对象：
+> 参考文章：<https://cloud.tencent.com/developer/article/1476110>
+
+1. Python 对象就是我们在常规 Python 中使用到的那些对象，诸如数值、字符串、列表和类实例等等。
+2. Cython C 对象就是那些 C 和 C++ 对象，诸如双精度、整型、浮点数、结构和向量，它们能够由 Cython 在超级高效的低级语言代码中进行编译。
+
+eg：Python代码：
+
+```py
+# test.py
+def test(x):
+     y = 1
+     for i in range(x+1):
+        y *= i
+     return y
+```
+
+优化后的Cython代码：
+
+```py
+# test.pyx
+cpdef int test(int x):
+     cdef int y = 1
+     cdef int i
+     for i in range(x+1):
+         y *= i
+     return y
+```
+
+创建一个 setup.py 文件，该文件将Cython代码编译为C代码
+
+```python
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(ext_modules = cythonize('run_cython.pyx'))
+# 编译命令：python setup.py build_ext --inplace
+```
+
+---
+
+### 2.4.测试
+
+#### 2.4.1.代码检测
 
 ##### 1.Sonar
 

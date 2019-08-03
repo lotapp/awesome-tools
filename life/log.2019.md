@@ -1,4 +1,7 @@
 - [2019](#2019)
+  - [八月](#%e5%85%ab%e6%9c%88)
+    - [2019-08-03](#2019-08-03)
+    - [2019-08-01](#2019-08-01)
   - [七月](#%e4%b8%83%e6%9c%88)
     - [2019-07-30](#2019-07-30)
     - [2019-07-29（前端）](#2019-07-29%e5%89%8d%e7%ab%af)
@@ -159,6 +162,56 @@
 2. 大前端全栈
 3. Go语言基础
 4. ReStart Safe
+
+## 八月
+
+### 2019-08-03
+
+
+
+### 2019-08-01
+
+**【推荐】Python小改动就能生成C代码**：
+> <https://github.com/cython/cython>
+
+Cython 语言是 Python 的一个超集，它包含有两种类型的对象：
+> 参考文章：<https://cloud.tencent.com/developer/article/1476110>
+
+1. Python 对象就是我们在常规 Python 中使用到的那些对象，诸如数值、字符串、列表和类实例等等。
+2. Cython C 对象就是那些 C 和 C++ 对象，诸如双精度、整型、浮点数、结构和向量，它们能够由 Cython 在超级高效的低级语言代码中进行编译。
+
+eg：Python代码：
+
+```py
+# test.py
+def test(x):
+     y = 1
+     for i in range(x+1):
+        y *= i
+     return y
+```
+
+优化后的Cython代码：
+
+```py
+# test.pyx
+cpdef int test(int x):
+     cdef int y = 1
+     cdef int i
+     for i in range(x+1):
+         y *= i
+     return y
+```
+
+创建一个 setup.py 文件，该文件将Cython代码编译为C代码
+
+```python
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(ext_modules = cythonize('run_cython.pyx'))
+# 编译命令：python setup.py build_ext --inplace
+```
 
 ## 七月
 
