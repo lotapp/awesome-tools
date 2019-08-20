@@ -1,5 +1,6 @@
 - [2019](#2019)
   - [八月](#%e5%85%ab%e6%9c%88)
+    - [2019-08-04](#2019-08-04)
     - [2019-08-03](#2019-08-03)
     - [2019-08-01](#2019-08-01)
   - [七月](#%e4%b8%83%e6%9c%88)
@@ -165,11 +166,28 @@
 
 ## 八月
 
+### 2019-08-04
+
+
 ### 2019-08-03
 
+淘宝Nginx文档：
+> <http://tengine.taobao.org/book/>
 
+**【推荐】小米监控：`Open-Falcon`**：
+> <https://github.com/open-falcon/falcon-plus/>
+
+中文文档：<http://book.open-falcon.org/zh_0_2/>
+
+PS：以前最经典的就是`Zabbix`和`Nagios`
 
 ### 2019-08-01
+
+**Burp Suite 实战指南**：
+> <https://t0data.gitbooks.io/burpsuite>
+
+**子域名收集工具**：
+> <https://github.com/lotapp/OneForAll>
 
 **【推荐】Python小改动就能生成C代码**：
 > <https://github.com/cython/cython>
