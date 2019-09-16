@@ -2,6 +2,9 @@
 
 - [2019](#2019)
   - [九月](#%e4%b9%9d%e6%9c%88)
+    - [2019-09-07（python）](#2019-09-07python)
+    - [2019-09-05（推荐）](#2019-09-05%e6%8e%a8%e8%8d%90)
+    - [2019-09-04](#2019-09-04)
     - [2019-09-03](#2019-09-03)
     - [2019-09-01](#2019-09-01)
   - [八月](#%e5%85%ab%e6%9c%88)
@@ -159,6 +162,129 @@
 
 ## 九月
 
+
+### 2019-09-07（python）
+
+**模拟HTTP请求结果的库**：可用于单元测试等场景
+> <https://github.com/lotapp/pook>
+
+```py
+import pook
+import requests
+
+@pook.get('http://httpbin.org/status/500', reply=204)
+@pook.get('http://httpbin.org/status/400', reply=200)
+def fetch(url):
+    return requests.get(url)
+
+res = fetch('http://httpbin.org/status/400')
+print('#1 status:', res.status_code)
+
+res = fetch('http://httpbin.org/status/500')
+print('#2 status:', res.status_code)
+```
+
+**中文近义词工具包**：支持文本对齐、推荐算法、相似度计算、语义偏移、关键字提取、概念提取、自动摘要、搜索引擎等
+> <https://github.com/lotapp/Synonyms>
+
+```py
+import synonyms
+synonyms.display("飞机")
+
+# '飞机'近义词：
+#   1. 架飞机:0.837399
+#   2. 客机:0.764609
+#   3. 直升机:0.762116
+#   4. 民航机:0.750519
+#   5. 航机:0.750116
+#   6. 起飞:0.735736
+#   7. 战机:0.734975
+#   8. 飞行中:0.732649
+#   9. 航空器:0.723945
+#   10. 运输机:0.720578
+```
+
+PS：NodeJS版：<https://www.npmjs.com/package/node-synonyms>
+
+### 2019-09-05（推荐）
+
+**【推荐】地理坐标自动转换库**：获取的地理坐标一般都有偏差，gcoord可以将坐标在不同坐标系下转换（高德、百度等）
+> <https://github.com/lotapp/gcoord>
+
+以BaiduMap为例：
+
+```js
+var result = gcoord.transform(
+    [ 116.403988, 39.914266 ],    // 经纬度坐标
+    gcoord.WGS84,                 // 当前坐标系
+    gcoord.BD09                   // 目标坐标系
+);
+
+console.log( result );  // [ 116.41661560068297, 39.92196580126834 ]
+```
+
+**【工具】Vue官方出品的静态网站生成器**：<https://vuepress.vuejs.org/zh/guide/>
+> <https://github.com/lotapp/vuepress>
+
+**【有赞】本地代码调试线上页面的工具**：集成了 HTTP 请求转发、模拟响应数据、自定义 DNS 解析等功能
+> <https://github.com/lotapp/zan-proxy>
+
+**【推荐】通过SVG元素创建页面大体布局**：
+> <https://github.com/lotapp/SVG-Skeleton>
+
+JSX Demo：
+
+```js
+import SVGSkeleton from 'svg-skeleton';
+
+const { h, render } = SVGSkeleton;
+
+// 内置 #shining 动画
+const Item = (
+    <svg width="750" height="191">
+        <circle cx="95" cy="102" r="63" fill="#edeff0" mask="url(#shining)" />
+        <rect width="160" height="35" x="190" y="45" fill="#edeff0" mask="url(#shining)" />
+        <rect width="400" height="35" x="190" y="90" fill="#edeff0" mask="url(#shining)" />
+        <line x1="0" y1="190" x2="750" y2="190" stroke="#edeff0"></line>
+    </svg>
+);
+
+const Page = ( ( ) => {
+    let List = [ ];
+
+    for ( let i = 0; i < 6; i++ ) {
+        List.push( ( <Item y={ i == 0 ? 0 : i * 191 } /> ) );
+    }
+
+    return (
+        <svg width="750" height="1334" fill="#fafafa">
+            { List }
+        </svg>
+    );
+} )( );
+
+render( Page,  document.body );
+```
+
+![output](https://svg-skeleton.js.org/README/1.gif)
+
+### 2019-09-04
+
+一套基于**Bootstrap 4**的开源后台模版：
+> <https://github.com/tabler/tabler>
+
+【NoSQL】AWS DynamoDB的命令查询工具：
+> <https://github.com/FrontMage/dynamo.cli>
+
+**Go语言写的高性能分布式游戏服务框架**：<https://github.com/lotapp/mqant>
+> 手册：<https://github.com/liangdas/mqant/wiki>
+
+**Java面试题手册**：<https://github.com/lotapp/JCSprout>
+
+基于`React`的经典坦克大战：<https://zhuanlan.zhihu.com/p/35551654>
+> <https://github.com/lotapp/battle-city>
+
+![game](https://img.hellogithub.com/HelloGitHub/25/img/battle-city-show-min.png)
 
 ### 2019-09-03
 
