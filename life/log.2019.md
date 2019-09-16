@@ -2,9 +2,11 @@
 
 - [2019](#2019)
   - [九月](#%e4%b9%9d%e6%9c%88)
-    - [2019-09-07（python）](#2019-09-07python)
-    - [2019-09-05（推荐）](#2019-09-05%e6%8e%a8%e8%8d%90)
-    - [2019-09-04](#2019-09-04)
+    - [2019-09-14（python）](#2019-09-14python)
+    - [2019-09-12（资源）](#2019-09-12%e8%b5%84%e6%ba%90)
+    - [2019-09-09（python）](#2019-09-09python)
+    - [2019-09-07（推荐）](#2019-09-07%e6%8e%a8%e8%8d%90)
+    - [2019-09-05](#2019-09-05)
     - [2019-09-03](#2019-09-03)
     - [2019-09-01](#2019-09-01)
   - [八月](#%e5%85%ab%e6%9c%88)
@@ -162,8 +164,46 @@
 
 ## 九月
 
+### 2019-09-14（python）
 
-### 2019-09-07（python）
+**【推荐】自己动手做聊天机器人**：
+> <https://github.com/lotapp/ChatBotCourse>
+
+**爬虫开源列表**：
+> <https://github.com/lotapp/awesome-spider>
+
+PyTorch教程和有趣的项目，包括神经话语，神经风格，诗歌写作，动漫生成
+> <https://github.com/lotapp/pytorch-book>
+
+### 2019-09-12（资源）
+
+**【推荐】Linux内核揭密**：一系列关于 Linux 内核和其内在机理的帖子
+> <https://github.com/lotapp/linux-insides-zh>
+
+PS：在线书籍：<https://xinqiu.gitbooks.io/linux-insides-cn/content/index.html>
+
+**leetcode解决方案集合**；
+> <https://github.com/lotapp/awesome-leetcode>
+
+**【推荐】Go语言高级编程**：
+> <https://github.com/lotapp/advanced-go-programming-book>
+
+PS：在线阅读：<https://chai2010.cn/advanced-go-programming-book/>
+
+MacOS开源应用程序列表：
+> <https://github.com/lotapp/open-source-mac-os-apps>
+
+C++教程：<https://github.com/changkun/modern-cpp-tutorial>
+
+### 2019-09-09（python）
+
+**定时任务管理平台**，管理和调度各种离线定时任务，自带 Web 管理界面
+> <https://github.com/LessChina/incubator-airflow>
+
+PS：当定时任务量达到百级别的时候，就无法再使用 crontab 有效、方便地管理这些任务了。该项目就是为了解决了这个问题而诞生的 
+
+有趣、令人惊讶（坑爹）、鲜为人知的 Python代码片段集合（之前推过）
+> <https://github.com/lotapp/wtfpython-cn>
 
 **模拟HTTP请求结果的库**：可用于单元测试等场景
 > <https://github.com/lotapp/pook>
@@ -206,7 +246,7 @@ synonyms.display("飞机")
 
 PS：NodeJS版：<https://www.npmjs.com/package/node-synonyms>
 
-### 2019-09-05（推荐）
+### 2019-09-07（推荐）
 
 **【推荐】地理坐标自动转换库**：获取的地理坐标一般都有偏差，gcoord可以将坐标在不同坐标系下转换（高德、百度等）
 > <https://github.com/lotapp/gcoord>
@@ -266,9 +306,9 @@ const Page = ( ( ) => {
 render( Page,  document.body );
 ```
 
-![output](https://svg-skeleton.js.org/README/1.gif)
+![output](https://img2018.cnblogs.com/blog/1127869/201909/1127869-20190916141158673-1932034510.gif)
 
-### 2019-09-04
+### 2019-09-05
 
 一套基于**Bootstrap 4**的开源后台模版：
 > <https://github.com/tabler/tabler>
@@ -284,7 +324,7 @@ render( Page,  document.body );
 基于`React`的经典坦克大战：<https://zhuanlan.zhihu.com/p/35551654>
 > <https://github.com/lotapp/battle-city>
 
-![game](https://img.hellogithub.com/HelloGitHub/25/img/battle-city-show-min.png)
+![game](https://img2018.cnblogs.com/blog/1127869/201909/1127869-20190916141329998-1162734799.png)
 
 ### 2019-09-03
 
