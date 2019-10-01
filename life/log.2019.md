@@ -2,6 +2,14 @@
 
 - [2019](#2019)
   - [九月](#%e4%b9%9d%e6%9c%88)
+    - [2019-09-30](#2019-09-30)
+    - [2019-09-28](#2019-09-28)
+    - [2019-09-26（资源）](#2019-09-26%e8%b5%84%e6%ba%90)
+    - [2019-09-24](#2019-09-24)
+    - [2019-09-22（爬虫）](#2019-09-22%e7%88%ac%e8%99%ab)
+    - [2019-09-20（必看）](#2019-09-20%e5%bf%85%e7%9c%8b)
+    - [2019-09-18](#2019-09-18)
+    - [2019-09-16（nginx）](#2019-09-16nginx)
     - [2019-09-14（python）](#2019-09-14python)
     - [2019-09-12（资源）](#2019-09-12%e8%b5%84%e6%ba%90)
     - [2019-09-09（python）](#2019-09-09python)
@@ -163,6 +171,227 @@
     - [2019-01-01（必看）](#2019-01-01%e5%bf%85%e7%9c%8b)
 
 ## 九月
+
+### 2019-09-30
+
+**【推荐】NodeJS+Git+Markdown实现轻松搭建内网wiki**：
+> <https://github.com/lotapp/wiki>
+
+**【推荐】区块链资源列表**（含Fabric和Ethereum）
+> <https://github.com/lotapp/awesome-blockchain-cn>
+
+**【推荐】NodeJS的fetch模块**（现在基本上都不用XMLHttpRequest了）
+> <https://github.com/lotapp/node-fetch>
+
+eg：`fetch('/url').then(res => {xxx}).catch(err => {xxx})`
+
+HTTP API设计指南：<https://github.com/interagent/http-api-design>
+> 在线阅读：<https://geemus.gitbooks.io/http-api-design/content/en/>
+
+PS：中文版不是最新：<https://github.com/ZhangBohan/http-api-design-ZH_CN>
+
+### 2019-09-28
+
+**【推荐】Vim入门手册**：
+> <https://github.com/lotapp/vim-galore-zh_cn>
+
+**【推荐】数据可视化项目**：可以直观地将一个SQL查询的结果可视化出来。同时提供SQL代码片段存储，减少重复编写SQL的问题
+> <https://github.com/lotapp/redash>
+
+![数据可视化Web项目](https://img2018.cnblogs.com/blog/658978/201910/658978-20191001205742383-1301634011.png)
+
+**验证码识别**：
+> <https://github.com/lotapp/captcha_break>
+
+### 2019-09-26（资源）
+
+**【推荐】号称最详细的AI学习路线**：
+> <https://github.com/lotapp/AiLearning>
+
+PS：**文档**：<https://ailearning.apachecn.org/#/>
+> **视频**：<<https://space.bilibili.com/97678687>>
+
+**TensorFlow官方文档中文版**：
+> <https://github.com/lotapp/tensorflow-docs>
+
+**笨方法学FFmpeg**：
+> <https://github.com/lotapp/ffmpeg-libav-tutorial>
+
+程序员怎么澳洲移民：
+> <https://github.com/wahyd4/work-in-australia>
+
+杭州买房经验参考：
+> <https://github.com/houshanren/hangzhou_house_knowledge>
+
+### 2019-09-24
+
+自动帮你挖比特币的免费App（看源码即可）
+> <https://github.com/lotapp/NiceHashMiner>
+
+微信开发Java SDK（支持微信支付、开放平台、小程序、企业号和公众号等）
+> <https://github.com/lotapp/WxJava>
+
+VSCode代码格式化工具：<https://github.com/prettier/prettier>
+
+Android组件化框架：<https://github.com/luckybilly/CC>
+
+IOS性能优化：<https://github.com/skyming/iOS-Performance-Optimization>
+
+PHP实现的各类算法：<https://github.com/PuShaoWei/arithmetic-php>
+
+### 2019-09-22（爬虫）
+
+**高可用的分布式ip代理池**（由Scrapy和Redis提供支持）
+> <https://github.com/lotapp/haipproxy?>
+
+```py
+from client.py_cli import ProxyFetcher
+args = dict(host='127.0.0.1', port=6379, password='123456', db=0)
+#　这里`zhihu`的意思是，去和`zhihu`相关的代理ip校验队列中获取ip
+#　这么做的原因是同一个代理IP对不同网站代理效果不同
+fetcher = ProxyFetcher('zhihu', strategy='greedy', redis_args=args)
+# 获取一个可用代理
+print(fetcher.get_proxy())
+# 获取可用代理列表
+print(fetcher.get_proxies()) # or print(fetcher.pool)
+```
+
+**【推荐】基于搜狗微信搜索的微信公众号爬虫库**：
+> <https://github.com/lotapp/WechatSogou>
+
+```py
+import wechatsogou
+
+ws_api = wechatsogou.WechatSogouAPI()
+ws_api.get_gzh_info('微信名称')
+```
+
+**【推荐】爬取网站并自动生成API**：
+> <https://github.com/lotapp/toapi>
+
+文档：<https://gaojiuli.github.io/toapi/>
+> <https://github.com/toapi/awesome-toapi>
+
+图示：
+
+![图示](https://img2018.cnblogs.com/blog/658978/201910/658978-20191001205315254-1984227454.png)
+
+```py
+from flask import request
+from htmlparsing import Attr, Text
+from toapi import Api, Item
+
+api = Api()
+
+@api.site('https://news.ycombinator.com')
+@api.list('.athing')
+@api.route('/posts?page={page}', '/news?p={page}')
+@api.route('/posts', '/news?p=1')
+class Post(Item):
+    url = Attr('.storylink', 'href')
+    title = Text('.storylink')
+
+@api.site('https://news.ycombinator.com')
+@api.route('/posts?page={page}', '/news?p={page}')
+@api.route('/posts', '/news?p=1')
+class Page(Item):
+    next_page = Attr('.morelink', 'href')
+
+    def clean_next_page(self, value):
+        return api.convert_string('/' + value, '/news?p={page}', request.host_url.strip('/') + '/posts?page={page}')
+
+api.run(debug=True, host='0.0.0.0', port=5000)
+```
+
+```json
+{
+  "Page": {
+    "next_page": "http://127.0.0.1:5000/posts?page=2"
+  },
+  "Post": [
+    {
+      "title": "Mathematicians Crack the Cursed Curve", 
+      "url": "https://www.quantamagazine.org/mathematicians-crack-the-cursed-curve-20171207/"
+    },
+    {
+      "title": "Stuffing a Tesla Drivetrain into a 1981 Honda Accord", 
+      "url": "https://jalopnik.com/this-glorious-madman-stuffed-a-p85-tesla-drivetrain-int-1823461909"
+    }
+  ]
+}
+```
+
+### 2019-09-20（必看）
+
+**【推荐】Node.js调试指南**：
+> <https://github.com/lotapp/node-in-debugging>
+
+**【推荐】前端面试手册**：
+> <https://github.com/lotapp/front-end-interview-handbook/blob/master/Translations/Chinese/README.md>
+
+**面试中需要掌握的基础知识**：
+> <https://github.com/lotapp/CS-Notes>
+
+**JavaScript代码片段集合**：
+> <https://github.com/lotapp/30-seconds-of-code>
+
+**【推荐】蚂蚁金服博客文章集合**：
+> <https://github.com/lotapp/blog>
+
+博客文章列表：<https://juejin.im/user/59659aff5188250cf956e6dd/posts>
+
+**后端开发面试题**：
+> <https://github.com/lotapp/Back-End-Developer-Interview-Questions>
+
+### 2019-09-18
+
+Go编写的简单视频下载程序(支持哔哩哔哩、YouTube )
+> <https://github.com/lotapp/annie>
+
+```shell
+$ annie -c cookies.txt https://www.bilibili.com/video/av20203945/
+
+ Site:      哔哩哔哩 bilibili.com
+ Title:     【2018拜年祭单品】相遇day by day
+ Type:      video
+ Stream:
+     [default]  -------------------
+     Quality:         高清 1080P60
+     Size:            220.65 MiB (231363071 Bytes)
+     # download with: annie -f default "URL"
+
+ 16.03 MiB / 220.65 MiB [==>----------------------------]   7.26% 9.65 MiB/s 19s
+```
+
+**【推荐】Golang知识图谱**：
+> <https://github.com/lotapp/knowledge>
+
+PS：在线预览：<https://www.processon.com/view/link/5a9ba4c8e4b0a9d22eb3bdf0>
+
+![](https://img2018.cnblogs.com/blog/658978/201910/658978-20191001193751037-146645719.png)
+
+Mac下音乐播放器：<https://github.com/iina/iina>
+
+Chrome 音乐实验室：<https://github.com/googlecreativelab/chrome-music-lab>
+
+### 2019-09-16（nginx）
+
+**【推荐】Nginx 1.9源码阅读**：
+> <https://github.com/lotapp/reading-code-of-nginx-1.9.2>
+
+PS：往期回顾
+
+**【推荐】在线生成`Nginx`配置文件网站**
+
+```shell
+在线：https://nginxconfig.io/
+Code：https://github.com/lotapp/nginxconfig.io
+```
+
+**【推荐】如何提高Nginx的性能和安全性的管理员手册**：
+> <https://github.com/lotapp/nginx-admins-handbook>
+
+---
 
 ### 2019-09-14（python）
 
