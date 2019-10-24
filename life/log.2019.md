@@ -3,8 +3,11 @@
 - [2019](#2019)
   - [十月（分类新排版）](#%e5%8d%81%e6%9c%88%e5%88%86%e7%b1%bb%e6%96%b0%e6%8e%92%e7%89%88)
     - [1.专业技能](#1%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd)
-      - [编程相关](#%e7%bc%96%e7%a8%8b%e7%9b%b8%e5%85%b3)
-      - [资源相关](#%e8%b5%84%e6%ba%90%e7%9b%b8%e5%85%b3)
+      - [1.1.编程相关](#11%e7%bc%96%e7%a8%8b%e7%9b%b8%e5%85%b3)
+        - [1.1.1.Python](#111python)
+        - [1.1.2.Golang](#112golang)
+        - [1.1.3.JavaScript](#113javascript)
+      - [1.2.资源相关](#12%e8%b5%84%e6%ba%90%e7%9b%b8%e5%85%b3)
     - [2.生活相关](#2%e7%94%9f%e6%b4%bb%e7%9b%b8%e5%85%b3)
       - [2.1.育儿](#21%e8%82%b2%e5%84%bf)
         - [1.怎么避免过度喂养](#1%e6%80%8e%e4%b9%88%e9%81%bf%e5%85%8d%e8%bf%87%e5%ba%a6%e5%96%82%e5%85%bb)
@@ -201,9 +204,30 @@
 
 ### 1.专业技能
 
-#### 编程相关
+#### 1.1.编程相关
 
-#### 资源相关
+##### 1.1.1.Python
+
+**【推荐】`把JS转换为Python`或者`在Python中执行Js`代码**：
+> <https://github.com/lotapp/Js2Py>
+
+```py
+import js2py
+
+f = js2py.eval_js('function f(x) {return x + x}')
+f(2) # 4
+```
+
+PS：还有一款单纯的在Python中执行JS：<https://github.com/lotapp/PyExecJS>
+
+**【推荐】Python代码转JS代码**：
+> <https://github.com/lotapp/py2js>
+
+##### 1.1.2.Golang
+
+##### 1.1.3.JavaScript
+
+#### 1.2.资源相关
 
 ---
 
