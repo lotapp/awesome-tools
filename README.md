@@ -32,6 +32,8 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
   - [2.Python](#2python)
     - [2.1.调试](#21%e8%b0%83%e8%af%95)
       - [2.1.1.PySnooper](#211pysnooper)
+      - [2.1.2.loguru](#212loguru)
+      - [2.1.3.other](#213other)
     - [2.2.Asyncio](#22asyncio)
     - [2.3.优化](#23%e4%bc%98%e5%8c%96)
       - [2.3.1.Numpy and Pandas](#231numpy-and-pandas)
@@ -87,6 +89,9 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
       - [6.3.1.镜像分析](#631%e9%95%9c%e5%83%8f%e5%88%86%e6%9e%90)
       - [6.3.2.镜像压缩](#632%e9%95%9c%e5%83%8f%e5%8e%8b%e7%bc%a9)
       - [6.3.3.镜像管理](#633%e9%95%9c%e5%83%8f%e7%ae%a1%e7%90%86)
+    - [6.4.云服务系](#64%e4%ba%91%e6%9c%8d%e5%8a%a1%e7%b3%bb)
+      - [6.4.1.PaaS](#641paas)
+      - [6.4.2.SaaS](#642saas)
 
 ## IDE
 
@@ -365,6 +370,18 @@ PS：可以把它当做`flutter`开发者帮助APP，里面包含`flutter`常用
 
 **代替print输出的PY调试库：`PySnooper`**：
 > <https://www.cnblogs.com/dotnetcrazy/p/10848257.html>
+
+#### 2.1.2.loguru
+
+**Python简化版日志库**：
+> <https://github.com/lotapp/loguru>
+
+#### 2.1.3.other
+
+**【推荐】Python进度条库**：监测代码执行进度
+> <https://github.com/lotapp/tqdm>
+
+![pypress](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105194341381-1438615179.gif)
 
 ### 2.2.Asyncio
 
@@ -1205,3 +1222,16 @@ GO111MODULE=on go install
 > <https://github.com/lotapp/lazydocker>
 
 ![lazydocker](https://img2018.cnblogs.com/blog/1127869/201908/1127869-20190802223625501-1088144162.png)
+
+### 6.4.云服务系
+
+#### 6.4.1.PaaS
+
+**【推荐】好雨开源的生产级无服务器PaaS**：
+> <https://github.com/lotapp/rainbond>
+
+文档地址：<https://www.rainbond.com/docs/>
+
+![paas](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105185024374-332146753.png)
+
+#### 6.4.2.SaaS

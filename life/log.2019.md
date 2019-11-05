@@ -4,10 +4,8 @@
   - [十月（分类新排版）](#%e5%8d%81%e6%9c%88%e5%88%86%e7%b1%bb%e6%96%b0%e6%8e%92%e7%89%88)
     - [1.专业技能](#1%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd)
       - [1.1.编程相关](#11%e7%bc%96%e7%a8%8b%e7%9b%b8%e5%85%b3)
-        - [1.1.1.Python](#111python)
-        - [1.1.2.Golang](#112golang)
-        - [1.1.3.JavaScript](#113javascript)
-      - [1.2.资源相关](#12%e8%b5%84%e6%ba%90%e7%9b%b8%e5%85%b3)
+      - [1.2.解决方案](#12%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88)
+      - [1.3.资源系列](#13%e8%b5%84%e6%ba%90%e7%b3%bb%e5%88%97)
     - [2.生活相关](#2%e7%94%9f%e6%b4%bb%e7%9b%b8%e5%85%b3)
       - [2.1.育儿](#21%e8%82%b2%e5%84%bf)
         - [1.怎么避免过度喂养](#1%e6%80%8e%e4%b9%88%e9%81%bf%e5%85%8d%e8%bf%87%e5%ba%a6%e5%96%82%e5%85%bb)
@@ -211,7 +209,16 @@
 
 #### 1.1.编程相关
 
-##### 1.1.1.Python
+**【推荐】全面解析HTTP2**：协议的背景、思想、内容、展望
+> <https://github.com/lotapp/http2-explained>
+
+**【推荐】安全API需要哪些东西**：
+> <https://github.com/lotapp/API-Security-Checklist/blob/master/README-zh.md>
+
+**【推荐】Python进度条库**（监测代码执行）
+> <https://github.com/lotapp/tqdm>
+
+![pypress](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105194341381-1438615179.gif)
 
 **【推荐】`把JS转换为Python`或者`在Python中执行Js`代码**：
 > <https://github.com/lotapp/Js2Py>
@@ -228,11 +235,113 @@ PS：还有一款单纯的在Python中执行JS：<https://github.com/lotapp/PyEx
 **【推荐】Python代码转JS代码**：
 > <https://github.com/lotapp/py2js>
 
-##### 1.1.2.Golang
+**【推荐】HTML5表格处理工具**：
+> <https://github.com/lotapp/handsontable>
 
-##### 1.1.3.JavaScript
+![table](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105190711929-874181906.png)
 
-#### 1.2.资源相关
+示例代码：
+
+```js
+const data = [
+  ['', 'Tesla', 'Volvo', 'Toyota', 'Ford'],
+  ['2019', 10, 11, 12, 13],
+  ['2020', 20, 11, 14, 13],
+  ['2021', 30, 15, 12, 13]
+];
+
+const container = document.getElementById('example');
+const hot = new Handsontable(container, {
+  data: data,
+  rowHeaders: true,
+  colHeaders: true
+});
+```
+
+**【推荐】shell脚本扩展**：通过Python的高阶函数和内置模块os.path与命令的管道结合，达到了强大、高效的效果
+> <https://github.com/lotapp/shell-functools>
+
+代码示例：
+
+```shell
+# ls 查看当前目录下的文件
+> ls 
+document.txt
+folder
+image.jpg
+
+# 通过 map abspath 展示这些文件的绝对路径（filesize可以显示文件大小）
+> ls | map abspath
+/tmp/demo/document.txt
+/tmp/demo/folder
+/tmp/demo/image.jpg
+
+# 按照文件大小排列
+> find | sort_by filesize
+
+# find 命令找到的文件和目录
+> find
+.
+./folder
+./folder/me.jpg
+./folder/subdirectory
+./folder/subdirectory/song.mp3
+./document.txt
+./image.jpg
+
+# 把找到的结果中的文件，重命名在末尾追加 .bak （备份文件）
+> find | filter is_file | map basename | map append ".bak"
+me.jpg.bak
+song.mp3.bak
+document.txt.bak
+image.jpg.bak
+
+# 最常用：文件和目录操作（其他可以看项目文档）
+abspath             :: Path   → Path
+dirname             :: Path   → Path
+basename            :: Path   → Path
+is_dir              :: Path   → Bool
+is_file             :: Path   → Bool
+is_link             :: Path   → Bool
+is_executable       :: Path   → Bool
+exists              :: Path   → Bool
+has_ext ext         :: Path   → Bool
+strip_ext           :: Path   → String
+replace_ext new_ext :: Path   → Path
+split_ext           :: Path   → Array
+```
+
+Android视频播放器组件：支持弹幕、滤镜、水印、截图、边播边缓存、重力旋转与手动旋转的同步等多种功能
+> <https://github.com/lotapp/GSYVideoPlayer>
+
+Java版websocket聊天插件（可参考源码）
+> <https://github.com/lotapp/anychat>
+
+![java](https://raw.githubusercontent.com/dianbaer/anychat/master/anychatphoto.png)
+
+#### 1.2.解决方案
+
+**【推荐】好雨开源的生产级无服务器PaaS**：
+> <https://github.com/lotapp/rainbond>
+
+再简单提一下概念：IaaS只提供最基本的功能，PaaS提供功能性服务，SaaS直接可以用
+> eg：烧个五花肉，IaaS只提供工具其他自己准备；PaaS是只需要你提供配料来调味，然后帮你烧完，SaaS直接就是给你一个成品
+
+![paas](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105185024374-332146753.png)
+
+#### 1.3.资源系列
+
+**【推荐】VueJS源码学习**：
+> <https://github.com/lotapp/learnVue>
+
+**Koa中文示例文档**：
+> <https://github.com/lotapp/koa-guide>
+
+在不借助框架的情况下，实现Web component的标准（用来理解组件化的概念挺不错的）
+> <https://github.com/nicholaslee119/webpack-component-loader>
+
+**Java版LeetCode**（面试题）：
+> <https://github.com/lotapp/awesome-java-leetcode>
 
 ---
 
@@ -473,19 +582,39 @@ PS：橘叶泡茶可以祛斑（**现在很多祛斑的中草药化妆品就是�
 ##### 5.山茱萸相关
 
 **性味归经**：酸、涩，微温。归肝、肾经。**功效**：补益肝肾，收涩固脱。
+> PS：是**山茱萸**而不是吴茱萸
+
+**中药鉴别**：逆天买了点泡茶喝，这段时间刚刚好（有积食就先化开再补)
+
+1. **看**：真山萸肉**果皮**往往**破裂皱缩**
+    - PS：加货卖相一般更漂亮，表皮更优质光滑。
+2. **尝**：真山萸肉**味**道**酸涩微苦**。
+    - PS：假货有的不酸，有的极酸，有的发苦，有的发甜
+
+---
 
 这边采集一些历代国医大师的用药心得：
 
-**张锡纯**：山萸肉味酸性温，大能收敛元气，振作精神，固涩滑脱。因得木气最厚，收涩之中兼具条畅之性，故又通九窍，流通血脉，治肝虚自汗，肝虚胁疼腰疼，肝虚内风萌动。且敛正气而不敛邪气。（用时务必将核去净）
+**张锡纯**：山萸肉味酸性温，大能收敛元气，振作精神，固涩滑脱。因得木气最厚，收涩之中兼具条畅之性，故又通九窍，流通血脉，治肝虚自汗，肝虚胁疼腰疼，肝虚内风萌动。且敛正气而不敛邪气。（用时务必**将核去净**）
 
-**黄元御**：味酸，入足厥阴肝经。温乙木而止疏泄，敛精液而缩小便。
+**黄元御**：味酸，入足厥阴肝经。温乙木而止疏泄，敛精液而缩小便。（**去核酒蒸**）
 
 **张景岳**：味酸涩，主收敛，气平微温，阴中阳也。入肝肾二脏。能固阴补精，暖腰膝，补阴气，涩带浊，节小便，益髓兴阳，调经收血。若脾气大弱而畏酸者，姑暂止之，或和以甘草、煨姜亦可。
 
-**陈修园**：
+**陈修园**：气味酸、平，无毒。主心下邪气，寒热，温中，逐寒湿痹，去浊。久服轻身（**去核**）山萸色紫赤而味酸平，禀厥阴、少阳木火之气化。
+> PS：**厥阴**（风木）==> 手厥阴**心包**经、足厥阴**肝**经；**少阳**（相火）==> 手少阳**三焦**经、足少阳**胆**经。
+
+---
+
+最新版**中药学**（第十版）：**山茱萸** ==> **性味归经**：酸、涩，微温。归肝、肾经。**功效**：补益肝肾，收涩固脱。
 
 1. 本品酸涩微温质润，其性温而不燥，补而不峻，功善补益肝肾，既能益精又可助阳，为平补阴阳之要药
+2. 本品既能补肾益精，又能固精缩尿。于补益之中又具封藏之功，为固精止遗之要药。
+3. 本品入下焦，能补肝肾、固冲任以止血。
+4. 本品酸涩性温，能敛汗固脱，为防止元气虚脱之要药。
+5. 本品能补益肝肾，治疗肝肾阴虚，内热消渴常与黄精、枸杞子、天花粉等滋补肝肾，清热生津的药来配
 
+最新版**中医药膳学**（第十版）：**禁忌** ==> **素有湿热、小便淋涩者不宜使用**
 
 ##### 6.诊断相关
 
