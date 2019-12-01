@@ -4,20 +4,20 @@
   - [十一月（分类新排版）](#%e5%8d%81%e4%b8%80%e6%9c%88%e5%88%86%e7%b1%bb%e6%96%b0%e6%8e%92%e7%89%88)
     - [1.专业技能](#1%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd)
       - [1.1.编程相关](#11%e7%bc%96%e7%a8%8b%e7%9b%b8%e5%85%b3)
+        - [Linux](#linux)
+        - [Py系](#py%e7%b3%bb)
+        - [JS系](#js%e7%b3%bb)
+        - [Go系](#go%e7%b3%bb)
+        - [Other](#other)
       - [1.2.解决方案](#12%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88)
       - [1.3.资源系列](#13%e8%b5%84%e6%ba%90%e7%b3%bb%e5%88%97)
     - [2.生活相关](#2%e7%94%9f%e6%b4%bb%e7%9b%b8%e5%85%b3)
       - [2.1.育儿](#21%e8%82%b2%e5%84%bf)
         - [1.宝宝自主入睡](#1%e5%ae%9d%e5%ae%9d%e8%87%aa%e4%b8%bb%e5%85%a5%e7%9d%a1)
         - [2.致聋流感神药：奥司他韦](#2%e8%87%b4%e8%81%8b%e6%b5%81%e6%84%9f%e7%a5%9e%e8%8d%af%e5%a5%a5%e5%8f%b8%e4%bb%96%e9%9f%a6)
-      - [2.2.技能](#22%e6%8a%80%e8%83%bd)
-      - [2.3.思想](#23%e6%80%9d%e6%83%b3)
-    - [3.医国道易](#3%e5%8c%bb%e5%9b%bd%e9%81%93%e6%98%93)
-      - [3.1.医学](#31%e5%8c%bb%e5%ad%a6)
-      - [3.2.国学](#32%e5%9b%bd%e5%ad%a6)
-      - [3.3.道学](#33%e9%81%93%e5%ad%a6)
-      - [3.4.易学](#34%e6%98%93%e5%ad%a6)
-    - [4.财经相关](#4%e8%b4%a2%e7%bb%8f%e7%9b%b8%e5%85%b3)
+    - [3.设计相关](#3%e8%ae%be%e8%ae%a1%e7%9b%b8%e5%85%b3)
+      - [3.1.PS系列](#31ps%e7%b3%bb%e5%88%97)
+      - [3.2.CDR系](#32cdr%e7%b3%bb)
   - [十月（分类新排版）](#%e5%8d%81%e6%9c%88%e5%88%86%e7%b1%bb%e6%96%b0%e6%8e%92%e7%89%88)
     - [1.专业技能](#1%e4%b8%93%e4%b8%9a%e6%8a%80%e8%83%bd-1)
       - [1.1.编程相关](#11%e7%bc%96%e7%a8%8b%e7%9b%b8%e5%85%b3-1)
@@ -30,12 +30,12 @@
         - [3.爱吃手的误区](#3%e7%88%b1%e5%90%83%e6%89%8b%e7%9a%84%e8%af%af%e5%8c%ba)
         - [4.溢奶与吐奶](#4%e6%ba%a2%e5%a5%b6%e4%b8%8e%e5%90%90%e5%a5%b6)
         - [5.中医治疗风寒注意事项](#5%e4%b8%ad%e5%8c%bb%e6%b2%bb%e7%96%97%e9%a3%8e%e5%af%92%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9)
-      - [2.2.技能](#22%e6%8a%80%e8%83%bd-1)
+      - [2.2.技能](#22%e6%8a%80%e8%83%bd)
         - [1.汽车钥匙拔不出来](#1%e6%b1%bd%e8%bd%a6%e9%92%a5%e5%8c%99%e6%8b%94%e4%b8%8d%e5%87%ba%e6%9d%a5)
         - [2.行李箱密码忘记了](#2%e8%a1%8c%e6%9d%8e%e7%ae%b1%e5%af%86%e7%a0%81%e5%bf%98%e8%ae%b0%e4%ba%86)
         - [3.化妆品挑选](#3%e5%8c%96%e5%a6%86%e5%93%81%e6%8c%91%e9%80%89)
-    - [3.医国道易](#3%e5%8c%bb%e5%9b%bd%e9%81%93%e6%98%93-1)
-      - [3.1.医学](#31%e5%8c%bb%e5%ad%a6-1)
+    - [3.医国道易](#3%e5%8c%bb%e5%9b%bd%e9%81%93%e6%98%93)
+      - [3.1.医学](#31%e5%8c%bb%e5%ad%a6)
         - [1.橘子一身是宝](#1%e6%a9%98%e5%ad%90%e4%b8%80%e8%ba%ab%e6%98%af%e5%ae%9d)
         - [2.治岔气](#2%e6%b2%bb%e5%b2%94%e6%b0%94)
         - [3.银耳生湿小解](#3%e9%93%b6%e8%80%b3%e7%94%9f%e6%b9%bf%e5%b0%8f%e8%a7%a3)
@@ -215,13 +215,135 @@
 
 ## 十一月（分类新排版）
 
+此月为过渡月，故业余所花时间不多，以程序和设计为主~
+
 ### 1.专业技能
 
 #### 1.1.编程相关
 
+##### Linux
+
+【推荐】在 Linux 命令行中，当你输入的命令有错误后，直接输入 **fuck** 就可以自动执行修复后的命令
+> <https://github.com/lotapp/thefuck>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201214943162-1715484958.gif)
+
+##### Py系
+
+**【推荐】中文分词：Jieba分词**
+> <https://github.com/LessChina/jieba>
+
+PS：3年前我写过一篇Net版的结巴分词入门文章，感兴趣可以一观
+> <https://www.cnblogs.com/dunitian/p/5841839.html>
+
+```py
+# encoding=utf-8
+import jieba
+
+seg_list = jieba.cut("我来到北京清华大学", cut_all=True)
+print("Full Mode: " + "/ ".join(seg_list))  # 全模式
+
+seg_list = jieba.cut("我来到北京清华大学", cut_all=False)
+print("Default Mode: " + "/ ".join(seg_list))  # 精确模式
+
+seg_list = jieba.cut("他来到了网易杭研大厦")  # 默认是精确模式
+print(", ".join(seg_list))
+
+seg_list = jieba.cut_for_search("小明硕士毕业于中国科学院计算所，后在日本京都大学深造")  # 搜索引擎模式
+print(", ".join(seg_list))
+
+【全模式】: 我/ 来到/ 北京/ 清华/ 清华大学/ 华大/ 大学
+
+【精确模式】: 我/ 来到/ 北京/ 清华大学
+
+【新词识别】：他, 来到, 了, 网易, 杭研, 大厦    (此处，“杭研”并没有在词典中，但是也被Viterbi算法识别出来了)
+
+【搜索引擎模式】： 小明, 硕士, 毕业, 于, 中国, 科学, 学院, 科学院, 中国科学院, 计算, 计算所, 后, 在, 日本, 京都, 大学, 日本京都大学, 深造
+```
+
+##### JS系
+
+一款可以抓取网页中AJAX异步内容的分布式爬虫框架
+> <https://github.com/zhuyingda/webster>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201212651296-2046129898.png)
+
+**上传插件**：支持多文件上传、上传速率动态控制、真实进度监控 kb/s、分块生成 MD5、分块上传、MD5 校验、暂停、取消等功能
+> <https://github.com/lotapp/anyupload>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201212741108-745814030.png)
+
+##### Go系
+
+采用 Go 语言开发的团队**通讯服务**项目
+> <https://github.com/lotapp/mattermost-server>
+
+##### Other
+
+**繁简转换库**：<https://github.com/lotapp/OpenCC>
+> 支持C、C++、Python、PHP、Java、Ruby、Node.js and Android
+
+**GitHub账号数据可视化服务**
+> <https://github.com/tipsy/profile-summary-for-github>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201212923500-1615786130.png)
+
+快速可靠的ARQ协议
+> <https://github.com/skywind3000/kcp>
+
+为Android项目添加ICON图标
+> <https://github.com/konifar/android-material-design-icon-generator-plugin>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201210524519-1012827336.png)
+
 #### 1.2.解决方案
 
+**适合学习的RPC**：极简组件式的RPC框架，适合渐进学习，可与任何框架整合
+> <https://github.com/lotapp/grain>
+
+包含系统通用多线程模型与消息通讯、多对多关系的分布式锁、基于系统通用多线程模型的 Websocket 框架、支持行级锁的多线程锁等组件
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201212512935-1375950582.png)
+
+**【推荐】阿里巴巴`MySQL binlog`增量订阅&消费组件**
+> <https://github.com/alibaba/canal>
+
+这个去年推过，不过现在新增了很多功能，故再推一波（UI、新版本）
+> 当前的 canal 支持源端 MySQL 版本包括 5.1.x , 5.5.x , 5.6.x , 5.7.x , 8.0.x
+
+C#客户端: <https://github.com/dotnetcore/CanalSharp>
+
+Go客户端: <https://github.com/CanalClient/canal-go>
+
+Python客户端：<https://github.com/haozi3156666/canal-python>
+
+MySQL数据库binlog的增量订阅、消费组件。模拟 MySQL salve 方式，实现 MySQL 的主从同步，同时加入了增量日志解析等功能。MySQL 原始主备机制，示意图如下：
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201210623575-115301971.png)
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201210713471-777367524.png)
+
 #### 1.3.资源系列
+
+**【推荐】适用于Python的有用数据结构和工具**：
+> <https://github.com/lotapp/pydu>
+
+**【推荐】利用Python进行数据分析-第二版(2017)**
+> <https://github.com/lotapp/pydata-notebook>
+
+**【推荐】Git使用参考规则**：
+> <https://github.com/lotapp/git-flight-rules/blob/master/README_zh-CN.md>
+
+**Go的建议和技巧列表**：
+> <https://github.com/cristaloleg/go-advices/blob/master/README_ZH.md>
+
+Android官方培训课程（中文版）
+> <https://github.com/kesenhoo/android-training-course-in-chinese>
+
+命令行学习：<https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md>
+
+收集和程序员有关的漫画段子
+> <https://github.com/pipiliang/hello-comic>
 
 ---
 
@@ -255,28 +377,33 @@
 
 ![奥司他韦](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191106164612309-1078908435.png)
 
-
 ---
 
-#### 2.2.技能
+### 3.设计相关
 
-#### 2.3.思想
+<a href="https://mp.weixin.qq.com/s/OrwUP6l-HPow-2KpBZdEfQ">【奇思】工作中遇到的一些Logo</a>
 
----
+#### 3.1.PS系列
 
-### 3.医国道易
+<a href="https://mp.weixin.qq.com/s/c5rHv74tS5tumXdKE6V52w">不为人知的PS小技能（上）</a>
 
-#### 3.1.医学
+<a href="https://mp.weixin.qq.com/s/evf6pY-r1zHTgPRgpbhxYw">如何利用裁剪工具让斜着图像变成正的？附真实案例</a>
 
-#### 3.2.国学
+<a href="https://mp.weixin.qq.com/s/TGihIEYMV8DYk77bVNoQtg">PS中如果没有字体，或者图片是图层的快速上色处理</a>
 
-#### 3.3.道学
+<a href="https://mp.weixin.qq.com/s/MR1YTs-HwLwklIG_uCyQNA">如何巧妙的放大打印尺寸且不失真？</a>
 
-#### 3.4.易学
+#### 3.2.CDR系
 
----
+<a href="https://mp.weixin.qq.com/s/37FxB-1Jdfw9L57OSlkdLA">记一次CDR镂空字踩坑</a>
 
-### 4.财经相关
+<a href="https://mp.weixin.qq.com/s/knNsuFDBLb2qBJdMR9zdUQ">临摹之后尖锐部分的处理</a>
+
+<a href="https://mp.weixin.qq.com/s/0cBuzKm0LLdUfdF36oTRQQ">CDR二维码线条处理</a>
+
+<a href="https://mp.weixin.qq.com/s/5Gb0zAOrlgfVSU6AMeu0TQ">CDR中怎么直接画出一个无描边且有填充色的矩形？</a>
+
+<a href="https://mp.weixin.qq.com/s/e96ODNOoaF0RY_8JiUIILw">记一下用矩形造了几个丑字，过程中Get到的技能点</a>
 
 ---
 

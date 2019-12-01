@@ -7,21 +7,6 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
 > **常用解决方案**：<https://github.com/LessChina>
 
 - [逆天开发库](#%e9%80%86%e5%a4%a9%e5%bc%80%e5%8f%91%e5%ba%93)
-  - [IDE](#ide)
-    - [1.VSCode推荐插件](#1vscode%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6)
-      - [1.1.Public](#11public)
-      - [1.2.Python](#12python)
-      - [1.3.JavaScript](#13javascript)
-      - [1.4.DataBase](#14database)
-      - [1.5.xxx](#15xxx)
-      - [1.6.NetCore](#16netcore)
-      - [other](#other)
-    - [2.NoteBook快捷键](#2notebook%e5%bf%ab%e6%8d%b7%e9%94%ae)
-      - [2.1.编辑模式快捷键](#21%e7%bc%96%e8%be%91%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
-      - [2.2.命令模式快捷键](#22%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
-      - [2.3.设置系列](#23%e8%ae%be%e7%bd%ae%e7%b3%bb%e5%88%97)
-    - [3.JetBrains系列快捷键](#3jetbrains%e7%b3%bb%e5%88%97%e5%bf%ab%e6%8d%b7%e9%94%ae)
-    - [4.VI快捷键：](#4vi%e5%bf%ab%e6%8d%b7%e9%94%ae)
   - [1.Web](#1web)
     - [1.1.多平台](#11%e5%a4%9a%e5%b9%b3%e5%8f%b0)
       - [1.1.1.Taro（推荐）](#111taro%e6%8e%a8%e8%8d%90)
@@ -81,6 +66,9 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
       - [5.1.1.分布式ID](#511%e5%88%86%e5%b8%83%e5%bc%8fid)
       - [5.1.2.布隆过滤](#512%e5%b8%83%e9%9a%86%e8%bf%87%e6%bb%a4)
   - [6.System](#6system)
+    - [命令行工具](#%e5%91%bd%e4%bb%a4%e8%a1%8c%e5%b7%a5%e5%85%b7)
+      - [1.命令修复](#1%e5%91%bd%e4%bb%a4%e4%bf%ae%e5%a4%8d)
+      - [2.简化版帮助文档](#2%e7%ae%80%e5%8c%96%e7%89%88%e5%b8%ae%e5%8a%a9%e6%96%87%e6%a1%a3)
     - [6.1.运维基础](#61%e8%bf%90%e7%bb%b4%e5%9f%ba%e7%a1%80)
       - [6.1.1.内网映射：nps（推荐）](#611%e5%86%85%e7%bd%91%e6%98%a0%e5%b0%84nps%e6%8e%a8%e8%8d%90)
     - [6.2.监控相关](#62%e7%9b%91%e6%8e%a7%e7%9b%b8%e5%85%b3)
@@ -92,195 +80,21 @@ PS：其实很多工具我以前曾经提过：**[大公司都有哪些开源项
     - [6.4.云服务系](#64%e4%ba%91%e6%9c%8d%e5%8a%a1%e7%b3%bb)
       - [6.4.1.PaaS](#641paas)
       - [6.4.2.SaaS](#642saas)
-
-## IDE
-
-**常用谷歌浏览器插件**：<https://www.cnblogs.com/dunitian/p/5848931.html>
-
-### 1.VSCode推荐插件
-
-#### 1.1.Public
-
-1. Markdown：**`Markdown All in One`**
-    - MarkDown To PDF：**`md2pdf`**
-2. JetBrains快捷键：**`IntelliJ IDEA Keybindings`**
-3. Git历史插件：**`Git History`**
-4. 微软开源的AI插件支持`C#, C++, TypeScript/JavaScript`：**`Visual Studio IntelliCode`**
-5. 文件远程编辑：`Remote - SSH`
-   - 参考文章：<https://www.cnblogs.com/dotnetcrazy/p/11254225.html>
-6. _项目图标：vscode-icons_
-
-PS：VSCode的`Markdown All in One`插件，列表选项卡只有3个空格的解决方案:
-> <https://www.cnblogs.com/dotnetcrazy/p/10748165.html>
-
-#### 1.2.Python
-
-1. 基本：**`Python`**
-2. 扩展：`Python Extension Pack`
-3. **`Python Preview`**：预览的时候**图示执行过程**
-4. 类型检查：**`pyright`**
-5. Jupyter Notebook预览插件：`VS Code Jupyter Notebook Previewer`
-
-pyright的说明：<https://github.com/Microsoft/pyright>
-
-不装插件（没提示）
-
-![20190507210220.png](https://i.loli.net/2019/05/07/5cd181e0539d7.png)
-
-装了插件（有提示）
-
-![20190507210128.png](https://i.loli.net/2019/05/07/5cd181ac9436a.png)
-
-#### 1.3.JavaScript
-
-1. **JS、CSS压缩：`Minify`**
-2. **给不同区块的括号上不同的色；`Bracket Pair Colorizer`**
-3. 在谷歌浏览器中调试：**`Debugger for Chrome`**
-    - 当前文件在默认浏览器中打开：**`open in browser`**
-4. 智能提示CSS与ID：**`HTML CSS Support`**
-5. 自动给`CSS文件`添加不同浏览器的CSS3前缀：**`Autoprefixer`**
-    - PS：会删除`-webkit-box-orient: vertical;` 记得手动添加一下（关注git文件对比就能快速定位）
-6. px转rem：**`cssrem`**
-    - PS：记得设置移动端默认字体大小：`"cssrem.rootFontSize": 20`
-7. less编译为css：**`Easy LESS`**
-8. 查看语法兼容性：**`Can I Use`**
-    - PS：搜索html5就能找到
-9. 实时监测JS输出：**`Quokka.js`**
-    - PS：只支持`js`和`ts`文件
-10. 语法检测：**`ESLint`**、`jshint`、`HTMLHint`
-11. js文档注释：`Document This`（`Ctrl+Alt+D`）
-12. CSS样式跳转：`CSS Peek`
-13. Vue框架智能提示：`Vetur`
-14. 缩写补全：`JavaScript (ES6) code snippets`
-15. 格式化插件：`Beautify`
-16. 文件版权声明：vscode-fileheader   ctrl+alt+i
-
-#### 1.4.DataBase
-
-1. MySQL VSCode版IDE：**`MySQL`**
-2. SQLServer插件：**`mssql`**
-3. 支持大部分传统数据库：`SQLTools`or`vscode-database`
-4. Redis客户端插件：`Redis console`
-
-#### 1.5.xxx
-
-#### 1.6.NetCore
-
-1. 基本：**`C#`**、**`C# Extensions`**
-2. NuGet：**`NuGet Package Manager`**
-3. 函数文档注释：`XML Documentation Comments`（///就生成注释）
-4. _IL视图：IL Viewer_
-
-#### other
-
-1. VSCode+Markdown下的快速上传插件：`PicGo`
-    - 上传剪贴板图片：`Ctrl + Alt + U`
-    - 上传本地的文件：`Ctrl + Alt + E`
-2. epub格式阅读：`epub reader`
-3. PHP相关：`PHP IntelliSense` and `PHP Debug`
-
----
-
-### 2.NoteBook快捷键
-
-**`Ctrl + Shift + P`查看快捷键**
-
-#### 2.1.编辑模式快捷键
-
-| 快捷键          | 说明                           |
-| --------------- | ------------------------------ |
-| `Tab键`         | 智能提示                       |
-| `Ctrl + /`      | 注释、取消注释                 |
-| `Ctrl + Enter`  | 执行当前Cell，停留在本Cell     |
-| `Shift + Enter` | 执行当前Cell，并跳转到下一行   |
-| `Alt + Enter`   | 执行当前Cell，并插入一行在后面 |
-| `上、下箭头`    | 移动聚焦的代码块               |
-
-#### 2.2.命令模式快捷键
-
-**PS：在编辑框中按`ESC`即可进入**
-
-| 快捷键             | 说明                   |
-| ------------------ | ---------------------- |
-| `f`                | 查找替换               |
-| `c`                | 复制Cell               |
-| `x`                | 剪贴Cell               |
-| **`dd`**           | **删除代码块**         |
-| **`a`**            | **在Cell前面插入一行** |
-| **`b`**            | **在Cell后面插入一行** |
-| **`m`**            | **Cell切换成Markdown** |
-| **`y`**            | **Cell切换成Code**     |
-| `Enter`            | **进入编辑模式**       |
-| `v`                | 在Cell后一行粘贴Cell   |
-| `Shift + v`        | 在Cell前一行粘贴Cell   |
-| `Shift + 上下箭头` | 选中多行               |
-
-#### 2.3.设置系列
-
-**1.设置默认路径**：
-> <https://www.cnblogs.com/dotnetcrazy/p/9261524.html>
-
-生成配置文件：jupyter-notebook --generate-config
-
-打开配置文件：code ~/.jupyter/jupyter_notebook_config.py
-
-设置默认路径：c.NotebookApp.notebook_dir = '/home/dnt/桌面/work'
-
-**2.设置服务器自定义密码**:
-> <https://www.cnblogs.com/dotnetcrazy/p/9824004.html>
-
-**3.安装目录的扩展包**：
-> <https://www.cnblogs.com/dotnetcrazy/p/10609041.html>
-
-**4.其他系列**：
-> <https://www.cnblogs.com/dotnetcrazy/p/9160514.html#2.1.编程环境>
-
-### 3.JetBrains系列快捷键
-
-| 快捷键                | 说明               |
-| --------------------- | ------------------ |
-| F6                    | 调试               |
-| F8                    | 跳过方法体         |
-| Alt + Enter           | 导入命名空间       |
-| Alt + 上下箭          | 移动到上下方法     |
-| Alt + 鼠标选中        | 选中多行           |
-| Ctrl + 鼠标悬浮       | 对象信息           |
-| Ctrl + P              | 参数提示           |
-| Ctrl + 空格           | 代码提示           |
-| Ctrl + Shift + 空格   | 显示方法预览       |
-| Ctrl + Shift + 上下箭 | 上下移动当前行     |
-| Alt + Shift + 左右箭  | 上一步下一步跳转   |
-| Ctrl + Alt + L        | 格式化代码         |
-| Ctrl + Shift + [      | 折叠代码块         |
-| Ctrl + Shift + ]      | 展开代码块         |
-| Ctrl + Shift + [      | 选择直到代码块开始 |
-| Ctrl + Shift + ]      | 选择直到代码块结束 |
-| Ctrl + Shift + I      | 快速显示定义       |
-| Ctrl + Shift + Enter  | 在下一行插入       |
-| Ctrl + Alt + Enter    | 在上一行插入       |
-| Ctrl + Delete         | 删除到单词结束     |
-| Ctrl + Backspace      | 删除到单词开头     |
-| Ctrl + W              | 选中当前代码块     |
-| Ctrl + Shift + W      | 取消选中代码块     |
-| Ctrl + Z              | 返回上一步         |
-| Ctrl + Shift + Z      | 撤销上一步         |
-| Ctrl + Shift + V      | 打开剪贴板列表     |
-| Shift + F6            | 左侧导航文件重命名 |
-
----
-
-### 4.VI快捷键：
-
-**命令摸模式下搜索**：`/关键词`
-> n下一个，N下一个
-
-PS：想要不高亮显示就/xxx查找一个不存在的即可
-
-**命令摸索下替换**：`:%s/old_str/new_str/g`
-
-**命令摸索跳转**：`G`跳转到最后一行
-
----
+  - [IDE](#ide)
+    - [1.VSCode推荐插件](#1vscode%e6%8e%a8%e8%8d%90%e6%8f%92%e4%bb%b6)
+      - [1.1.Public](#11public)
+      - [1.2.Python](#12python)
+      - [1.3.JavaScript](#13javascript)
+      - [1.4.DataBase](#14database)
+      - [1.5.xxx](#15xxx)
+      - [1.6.NetCore](#16netcore)
+      - [other](#other)
+    - [2.NoteBook快捷键](#2notebook%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.1.编辑模式快捷键](#21%e7%bc%96%e8%be%91%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.2.命令模式快捷键](#22%e5%91%bd%e4%bb%a4%e6%a8%a1%e5%bc%8f%e5%bf%ab%e6%8d%b7%e9%94%ae)
+      - [2.3.设置系列](#23%e8%ae%be%e7%bd%ae%e7%b3%bb%e5%88%97)
+    - [3.JetBrains系列快捷键](#3jetbrains%e7%b3%bb%e5%88%97%e5%bf%ab%e6%8d%b7%e9%94%ae)
+    - [4.VI快捷键：](#4vi%e5%bf%ab%e6%8d%b7%e9%94%ae)
 
 ## 1.Web
 
@@ -1115,6 +929,20 @@ PS：扩展 ~ `Snowflake算法`
 
 ## 6.System
 
+### 命令行工具
+
+#### 1.命令修复
+
+在 Linux 命令行中，当你输入的命令有错误后，直接输入 **fuck** 就可以自动执行修复后的命令
+> <https://github.com/lotapp/thefuck>
+
+![](https://img2018.cnblogs.com/blog/1127869/201912/1127869-20191201214943162-1715484958.gif)
+
+#### 2.简化版帮助文档
+
+**【推荐】洁版linux命令帮助工具：`tldr`**
+> <https://github.com/lotapp/tldr>
+
 ### 6.1.运维基础
 
 #### 6.1.1.内网映射：nps（推荐）
@@ -1235,3 +1063,192 @@ GO111MODULE=on go install
 ![paas](https://img2018.cnblogs.com/blog/1127869/201911/1127869-20191105185024374-332146753.png)
 
 #### 6.4.2.SaaS
+
+---
+
+## IDE
+
+**常用谷歌浏览器插件**：<https://www.cnblogs.com/dunitian/p/5848931.html>
+
+### 1.VSCode推荐插件
+
+#### 1.1.Public
+
+1. Markdown：**`Markdown All in One`**
+    - MarkDown To PDF：**`md2pdf`**
+2. JetBrains快捷键：**`IntelliJ IDEA Keybindings`**
+3. Git历史插件：**`Git History`**
+4. 微软开源的AI插件支持`C#, C++, TypeScript/JavaScript`：**`Visual Studio IntelliCode`**
+5. 文件远程编辑：`Remote - SSH`
+   - 参考文章：<https://www.cnblogs.com/dotnetcrazy/p/11254225.html>
+6. _项目图标：vscode-icons_
+
+PS：VSCode的`Markdown All in One`插件，列表选项卡只有3个空格的解决方案:
+> <https://www.cnblogs.com/dotnetcrazy/p/10748165.html>
+
+#### 1.2.Python
+
+1. 基本：**`Python`**
+2. 扩展：`Python Extension Pack`
+3. **`Python Preview`**：预览的时候**图示执行过程**
+4. 类型检查：**`pyright`**
+5. Jupyter Notebook预览插件：`VS Code Jupyter Notebook Previewer`
+
+pyright的说明：<https://github.com/Microsoft/pyright>
+
+不装插件（没提示）
+
+![20190507210220.png](https://i.loli.net/2019/05/07/5cd181e0539d7.png)
+
+装了插件（有提示）
+
+![20190507210128.png](https://i.loli.net/2019/05/07/5cd181ac9436a.png)
+
+#### 1.3.JavaScript
+
+1. **JS、CSS压缩：`Minify`**
+2. **给不同区块的括号上不同的色；`Bracket Pair Colorizer`**
+3. 在谷歌浏览器中调试：**`Debugger for Chrome`**
+    - 当前文件在默认浏览器中打开：**`open in browser`**
+4. 智能提示CSS与ID：**`HTML CSS Support`**
+5. 自动给`CSS文件`添加不同浏览器的CSS3前缀：**`Autoprefixer`**
+    - PS：会删除`-webkit-box-orient: vertical;` 记得手动添加一下（关注git文件对比就能快速定位）
+6. px转rem：**`cssrem`**
+    - PS：记得设置移动端默认字体大小：`"cssrem.rootFontSize": 20`
+7. less编译为css：**`Easy LESS`**
+8. 查看语法兼容性：**`Can I Use`**
+    - PS：搜索html5就能找到
+9. 实时监测JS输出：**`Quokka.js`**
+    - PS：只支持`js`和`ts`文件
+10. 语法检测：**`ESLint`**、`jshint`、`HTMLHint`
+11. js文档注释：`Document This`（`Ctrl+Alt+D`）
+12. CSS样式跳转：`CSS Peek`
+13. Vue框架智能提示：`Vetur`
+14. 缩写补全：`JavaScript (ES6) code snippets`
+15. 格式化插件：`Beautify`
+16. 文件版权声明：vscode-fileheader   ctrl+alt+i
+
+#### 1.4.DataBase
+
+1. MySQL VSCode版IDE：**`MySQL`**
+2. SQLServer插件：**`mssql`**
+3. 支持大部分传统数据库：`SQLTools`or`vscode-database`
+4. Redis客户端插件：`Redis console`
+
+#### 1.5.xxx
+
+#### 1.6.NetCore
+
+1. 基本：**`C#`**、**`C# Extensions`**
+2. NuGet：**`NuGet Package Manager`**
+3. 函数文档注释：`XML Documentation Comments`（///就生成注释）
+4. _IL视图：IL Viewer_
+
+#### other
+
+1. VSCode+Markdown下的快速上传插件：`PicGo`
+    - 上传剪贴板图片：`Ctrl + Alt + U`
+    - 上传本地的文件：`Ctrl + Alt + E`
+2. epub格式阅读：`epub reader`
+3. PHP相关：`PHP IntelliSense` and `PHP Debug`
+
+---
+
+### 2.NoteBook快捷键
+
+**`Ctrl + Shift + P`查看快捷键**
+
+#### 2.1.编辑模式快捷键
+
+| 快捷键          | 说明                           |
+| --------------- | ------------------------------ |
+| `Tab键`         | 智能提示                       |
+| `Ctrl + /`      | 注释、取消注释                 |
+| `Ctrl + Enter`  | 执行当前Cell，停留在本Cell     |
+| `Shift + Enter` | 执行当前Cell，并跳转到下一行   |
+| `Alt + Enter`   | 执行当前Cell，并插入一行在后面 |
+| `上、下箭头`    | 移动聚焦的代码块               |
+
+#### 2.2.命令模式快捷键
+
+**PS：在编辑框中按`ESC`即可进入**
+
+| 快捷键             | 说明                   |
+| ------------------ | ---------------------- |
+| `f`                | 查找替换               |
+| `c`                | 复制Cell               |
+| `x`                | 剪贴Cell               |
+| **`dd`**           | **删除代码块**         |
+| **`a`**            | **在Cell前面插入一行** |
+| **`b`**            | **在Cell后面插入一行** |
+| **`m`**            | **Cell切换成Markdown** |
+| **`y`**            | **Cell切换成Code**     |
+| `Enter`            | **进入编辑模式**       |
+| `v`                | 在Cell后一行粘贴Cell   |
+| `Shift + v`        | 在Cell前一行粘贴Cell   |
+| `Shift + 上下箭头` | 选中多行               |
+
+#### 2.3.设置系列
+
+**1.设置默认路径**：
+> <https://www.cnblogs.com/dotnetcrazy/p/9261524.html>
+
+生成配置文件：jupyter-notebook --generate-config
+
+打开配置文件：code ~/.jupyter/jupyter_notebook_config.py
+
+设置默认路径：c.NotebookApp.notebook_dir = '/home/dnt/桌面/work'
+
+**2.设置服务器自定义密码**:
+> <https://www.cnblogs.com/dotnetcrazy/p/9824004.html>
+
+**3.安装目录的扩展包**：
+> <https://www.cnblogs.com/dotnetcrazy/p/10609041.html>
+
+**4.其他系列**：
+> <https://www.cnblogs.com/dotnetcrazy/p/9160514.html#2.1.编程环境>
+
+### 3.JetBrains系列快捷键
+
+| 快捷键                | 说明               |
+| --------------------- | ------------------ |
+| F6                    | 调试               |
+| F8                    | 跳过方法体         |
+| Alt + Enter           | 导入命名空间       |
+| Alt + 上下箭          | 移动到上下方法     |
+| Alt + 鼠标选中        | 选中多行           |
+| Ctrl + 鼠标悬浮       | 对象信息           |
+| Ctrl + P              | 参数提示           |
+| Ctrl + 空格           | 代码提示           |
+| Ctrl + Shift + 空格   | 显示方法预览       |
+| Ctrl + Shift + 上下箭 | 上下移动当前行     |
+| Alt + Shift + 左右箭  | 上一步下一步跳转   |
+| Ctrl + Alt + L        | 格式化代码         |
+| Ctrl + Shift + [      | 折叠代码块         |
+| Ctrl + Shift + ]      | 展开代码块         |
+| Ctrl + Shift + [      | 选择直到代码块开始 |
+| Ctrl + Shift + ]      | 选择直到代码块结束 |
+| Ctrl + Shift + I      | 快速显示定义       |
+| Ctrl + Shift + Enter  | 在下一行插入       |
+| Ctrl + Alt + Enter    | 在上一行插入       |
+| Ctrl + Delete         | 删除到单词结束     |
+| Ctrl + Backspace      | 删除到单词开头     |
+| Ctrl + W              | 选中当前代码块     |
+| Ctrl + Shift + W      | 取消选中代码块     |
+| Ctrl + Z              | 返回上一步         |
+| Ctrl + Shift + Z      | 撤销上一步         |
+| Ctrl + Shift + V      | 打开剪贴板列表     |
+| Shift + F6            | 左侧导航文件重命名 |
+
+---
+
+### 4.VI快捷键：
+
+**命令摸模式下搜索**：`/关键词`
+> n下一个，N下一个
+
+PS：想要不高亮显示就/xxx查找一个不存在的即可
+
+**命令摸索下替换**：`:%s/old_str/new_str/g`
+
+**命令摸索跳转**：`G`跳转到最后一行
