@@ -192,6 +192,13 @@ PS：可以把它当做`flutter`开发者帮助APP，里面包含`flutter`常用
 
 #### 2.1.3.other
 
+**【推荐】可视化的方式来实时追踪Python代码**：
+> <https://github.com/lotapp/livepython>
+
+![livepython](https://img2018.cnblogs.com/blog/658978/201912/658978-20191231202741791-785163447.gif)
+
+PS：之前有介绍过VSCode的一款插件`Python Preview`
+
 **【推荐】Python进度条库**：监测代码执行进度
 > <https://github.com/lotapp/tqdm>
 
